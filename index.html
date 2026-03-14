@@ -1,453 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Arif Hossain | Academic Website</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --panel: #ffffff;
-      --soft: #f4f6fb;
-      --text: #1a1a1a;
-      --muted: #555555;
-      --accent: #1f6feb;
-      --accent2: #6f42c1;
-      --line: rgba(0,0,0,0.08);
-      --shadow: 0 8px 25px rgba(0,0,0,0.08);
-      --max: 1100px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: var(--text);
-      line-height: 1.6;
-    }
+<title>Mohammad Arif Hossain</title>
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+<style>
 
-    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#ffffff;
+color:#222;
+line-height:1.6;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(11, 16, 32, 0.82);
-      border-bottom: 1px solid var(--line);
-      z-index: 10;
-    }
+.container{
+width:100%;
+max-width:1050px;
+margin:auto;
+padding:20px;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-    }
+header{
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
 
-    .brand {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
-    }
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
 
-    .hero {
-      padding: 72px 0 42px;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 28px;
-      align-items: center;
-    }
+.hero{
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:30px;
+padding-top:40px;
+align-items:center;
+}
 
-    .hero-card, .panel {
-      background: transparent;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-    }
+.profile-img{
+width:170px;
+border-radius:50%;
+margin-bottom:15px;
+}
 
-    .hero-card { padding: 34px; }
+h1{
+margin:0;
+font-size:34px;
+}
 
-    .profile-img{
-      width:160px;
-      border-radius:50%;
-      margin-bottom:18px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.15);
-    }
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1.1;
-    }
+.subtitle{
+color:#555;
+margin-top:10px;
+}
 
-    .hero .subtitle {
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 750px;
-      margin-bottom: 20px;
-    }
+.badge{
+border:1px solid #ddd;
+border-radius:20px;
+padding:6px 12px;
+margin:4px;
+display:inline-block;
+font-size:14px;
+}
 
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 18px 0 24px;
-    }
+.btn{
+display:inline-block;
+padding:10px 18px;
+border-radius:10px;
+margin-top:10px;
+font-weight:bold;
+text-decoration:none;
+}
 
-    .badge {
-      background: transparent;
-      border: 1px solid var(--line);
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-    }
+.btn.primary{
+background:#1f6feb;
+color:white;
+}
 
-    .cta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
+.btn.secondary{
+border:1px solid #ddd;
+color:#333;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      border: 1px solid var(--line);
-      transition: transform 0.15s ease, opacity 0.15s ease;
-    }
+section{
+margin-top:40px;
+}
 
-    .btn:hover { transform: translateY(-1px); opacity: 0.95; text-decoration: none; }
-    .btn.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #08111f;
-      border: none;
-    }
-    .btn.secondary {
-      background: transparent;
-      color: var(--text);
-    }
+h2{
+border-bottom:2px solid #f2f2f2;
+padding-bottom:5px;
+}
 
-    .stats {
-      padding: 24px;
-      display: grid;
-      gap: 14px;
-    }
+.pub{
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
 
-    .stat {
-      padding: 10px 0;
-      border-radius: 0;
-      background: transparent;
-      border: none;
-    }
+.venue{
+font-size:12px;
+font-weight:bold;
+background:#1f6feb;
+color:white;
+padding:4px 8px;
+border-radius:8px;
+margin-right:8px;
+}
 
-    .stat strong {
-      display: block;
-      font-size: 1.6rem;
-      margin-bottom: 4px;
-    }
+.scholar-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:50px;
+height:50px;
+background:#1fa34a;
+border-radius:10px;
+margin-top:15px;
+}
 
-    section { padding: 18px 0 14px; }
-    section h2 {
-      margin: 0 0 16px;
-      font-size: 1.7rem;
-    }
+.scholar-btn img{
+width:26px;
+}
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
+.contact-item{
+margin-top:10px;
+}
 
-    .panel { padding: 26px; }
+footer{
+margin-top:50px;
+padding-top:20px;
+border-top:1px solid #eee;
+font-size:14px;
+color:#666;
+}
 
-    .list-clean {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
+@media(max-width:800px){
 
-    .list-clean li { margin-bottom: 10px; }
+.hero{
+grid-template-columns:1fr;
+}
 
-    .pubs {
-      display: grid;
-      gap: 14px;
-    }
+}
 
-    .pub {
-      padding: 12px 0;
-      border-radius: 0;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .pub .venue {
-      display: inline-block;
-      margin-bottom: 8px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: #08111f;
-      background: var(--accent); color:#ffffff;
-      padding: 5px 10px;
-      border-radius: 999px;
-    }
-
-    .pub h3 {
-      margin: 0 0 8px;
-      font-size: 1.06rem;
-    }
-
-    .pub p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .contact-item {
-      padding: 8px 0;
-      border-radius: 0;
-      background: transparent;
-      border: none;
-    }
-
-    footer {
-      padding: 28px 0 48px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero, .grid-2, .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+</style>
 </head>
+
+
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">Mohammad Arif Hossain</div>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#service">Service</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-card">
-        <img src="profile.jpg" class="profile-img" alt="Mohammad Arif Hossain" />
-        <p style="margin:0 0 10px; color: var(--accent); font-weight:700;">Assistant Professor • Middle Tennessee State University</p>
-        <h1>AI-native Networking, Distributed Intelligence, and Secure Edge Systems</h1>
-        <p class="subtitle">
-          I am Mohammad Arif Hossain, Ph.D., Assistant Professor in the Department of Engineering Technology at Middle Tennessee State University. My work focuses on AI-enabled cybersecurity, agentic AI, distributed machine learning, cloud-edge computing, quantum-assisted ML, and next-generation networks.
-        </p>
-        <div class="badge-row">
-          <span class="badge">AI-enabled Cyber Security</span>
-          <span class="badge">Agentic AI</span>
-          <span class="badge">Distributed Machine Learning</span>
-          <span class="badge">Edge Computing</span>
-          <span class="badge">Quantum-assisted ML</span>
-          <span class="badge">6G / IoT Systems</span>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="#publications">Top Publications</a>
-          <a class="btn secondary" href="#contact">Contact</a>
-        </div>
-      </div>
 
-      <aside class="panel stats">
-        <div class="stat">
-          <strong>Google Scholar</strong>
-          <span><a href="https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">View full citation profile</a></span>
-        </div>
-      </aside>
-    </section>
+<header>
+<div class="container">
 
-    <section id="about">
-      <div class="grid-2">
-        <div class="panel">
-          <h2>About</h2>
-          <p style="color: var(--muted); margin-top: 0;">
-            Dr. Hossain received his Ph.D. in Computer Engineering from the New Jersey Institute of Technology. He is currently a faculty member at MTSU and works broadly in distributed edge intelligence, AI-native networking, cybersecurity, and cyber-physical systems.
-          </p>
-          <p style="color: var(--muted); margin-bottom: 0;">
-            His recent efforts span secure and efficient distributed learning, AI-assisted network slicing, edge intelligence for IoT, and resilient future wireless systems.
-          </p>
-        </div>
-        <div class="panel" id="research">
-          <h2>Research Areas</h2>
-          <ul class="list-clean">
-            <li>AI-enabled cybersecurity and trustworthy distributed intelligence</li>
-            <li>Distributed and federated machine learning over edge/cloud systems</li>
-            <li>Network slicing, mobile edge computing, and 5G/6G optimization</li>
-            <li>Agentic AI, quantum-assisted ML, and IoT-enabled cyber-physical systems</li>
-            <li>Secure, scalable, and energy-efficient wireless networking architectures</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<nav>
 
-    <section id="publications">
-      <div class="panel">
-        <h2>Selected Publications</h2>
-        <p style="color: var(--muted); margin-top: 0;">
-          A curated list of representative papers from leading IEEE journals and major international conferences.
-        </p>
-        <div class="pubs">
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Cognitive Communications and Networking</span>
-            <h3>Mobile Edge Computing for Multi-services Digital Twin-enabled IoT Heterogeneous Networks</h3>
-            <p>W. Liu, <strong>M. A. Hossain</strong>, and N. Ansari, <em>IEEE Transactions on Cognitive Communications and Networking</em>, vol. 11, no. 3, pp. 1845–1853, June 2025.</p>
-          </div>
+<div><strong>Mohammad Arif Hossain</strong></div>
 
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Network and Service Management</span>
-            <h3>Reinforcement Learning-based Network Slicing Scheme for Optimized UE-QoS in Future Networks</h3>
-            <p>W. Liu, <strong>M. A. Hossain</strong>, N. Ansari, A. Kiani, and T. Saboorian, <em>IEEE Transactions on Network and Service Management</em>, vol. 21, no. 3, pp. 3454–3464, June 2024.</p>
-          </div>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#contact">Contact</a>
+</div>
 
-          <div class="pub">
-            <span class="venue">IEEE Internet of Things Journal</span>
-            <h3>Computation-Efficient Offloading and Power Control for MEC in IoT Networks by Meta Reinforcement Learning</h3>
-            <p><strong>M. A. Hossain</strong>, W. Liu, and N. Ansari, <em>IEEE Internet of Things Journal</em>, vol. 11, no. 9, pp. 16722–16730, May 2024.</p>
-          </div>
+</nav>
 
-          <div class="pub">
-            <span class="venue">IEEE Internet of Things Journal</span>
-            <h3>AI-assisted E2E Network Slicing for Integrated Sensing and Communication in 6G Networks</h3>
-            <p><strong>M. A. Hossain</strong>, A. Xiang, A. Kiani, T. Saboorian, J. Kaippallimalil, and N. Ansari, <em>IEEE Internet of Things Journal</em>, vol. 11, no. 6, pp. 10627–10634, March 2024.</p>
-          </div>
+</div>
+</header>
 
-          <div class="pub">
-            <span class="venue">IEEE Network</span>
-            <h3>A Decentralized Collaborative Learning Approach in 5G+ Core Networks</h3>
-            <p><strong>M. A. Hossain</strong> et al., <em>IEEE Network</em>, vol. 38, no. 1, pp. 288–295, January 2024.</p>
-          </div>
 
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Cloud Computing</span>
-            <h3>Energy-efficient Federated Edge Learning in Multi-tier NOMA-enabled HetNet</h3>
-            <p><strong>M. A. Hossain</strong> and N. Ansari, <em>IEEE Transactions on Cloud Computing</em>, vol. 11, no. 4, pp. 3355–3366, October–December 2023.</p>
-          </div>
+<div class="container">
 
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Cloud Computing</span>
-            <h3>Hybrid Multiple Access for Network Slicing Aware Mobile Edge Computing</h3>
-            <p><strong>M. A. Hossain</strong> and N. Ansari, <em>IEEE Transactions on Cloud Computing</em>, vol. 11, no. 3, pp. 2910–2921, July–September 2023.</p>
-          </div>
+<section class="hero">
 
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Vehicular Technology</span>
-            <h3>Dual-Band Aerial Networks for Priority-Based Traffic</h3>
-            <p>A. R. Hossain, <strong>M. A. Hossain</strong>, and N. Ansari, <em>IEEE Transactions on Vehicular Technology</em>, vol. 72, no. 7, pp. 9500–9510, July 2023.</p>
-          </div>
+<div>
 
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Cloud Computing</span>
-            <h3>Network Slicing for NOMA-enabled Edge Computing</h3>
-            <p><strong>M. A. Hossain</strong> and N. Ansari, <em>IEEE Transactions on Cloud Computing</em>, vol. 11, no. 1, pp. 811–821, January–March 2023.</p>
-          </div>
+<img src="profile.jpg" class="profile-img">
 
-          <div class="pub">
-            <span class="venue">IEEE Internet of Things Journal</span>
-            <h3>Numerology-capable UAV-MEC for Future Generation Massive IoT Networks</h3>
-            <p><strong>M. A. Hossain</strong>, A. R. Hossain, and N. Ansari, <em>IEEE Internet of Things Journal</em>, vol. 9, no. 23, pp. 23860–23868, December 2022.</p>
-          </div>
+<h1>Mohammad Arif Hossain</h1>
 
-          <div class="pub">
-            <span class="venue">IEEE Network</span>
-            <h3>AI in 6G: Energy-Efficient Distributed Machine Learning for Multilayer Heterogeneous Networks</h3>
-            <p><strong>M. A. Hossain</strong>, A. R. Hossain, and N. Ansari, <em>IEEE Network</em>, vol. 36, no. 6, pp. 84–91, November/December 2022.</p>
-          </div>
+<p class="subtitle">
+Assistant Professor, Department of Engineering Technology<br>
+Middle Tennessee State University
+</p>
 
-          <div class="pub">
-            <span class="venue">IEEE Transactions on Green Communications and Networking</span>
-            <h3>Energy Aware Latency Minimization for Network Slicing Enabled Edge Computing</h3>
-            <p><strong>M. A. Hossain</strong> and N. Ansari, <em>IEEE Transactions on Green Communications and Networking</em>, vol. 5, no. 4, pp. 2150–2159, December 2021.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<p>
+My research focuses on distributed edge intelligence, AI-native networking,
+cybersecurity, federated learning, and next-generation wireless and IoT systems.
+</p>
 
-    <section id="service">
-      <div class="grid-2">
-        <div class="panel">
-          <h2>Professional Service</h2>
-          <ul class="list-clean">
-            <li>Publicity Chair, 2026 IEEE Conference on Secure and Trustworthy CyberInfrastructure for IoT and Microelectronics</li>
-            <li>Publicity Chair, SENSORNETS 2026</li>
-            <li>TPC member for IEEE ICC, IEEE WCNC, ACM/IEEE SEC, and IEEE WF-IoT</li>
-            <li>Reviewer for IEEE JSAC, IEEE TCC, IEEE TMC, IEEE TWC, IEEE IoT Journal, IEEE TNSM, IEEE TNSE, and other major venues</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h2>Honors & Recognition</h2>
-          <ul class="list-clean">
-            <li>2025 Newark College of Engineering Outstanding Dissertation Award, NJIT</li>
-            <li>Hashimoto Prize, NJIT, 2024</li>
-            <li>Hashimoto Fellowship, 2022–2024</li>
-            <li>Ross Fellowship, NJIT, 2023</li>
-            <li>Best Paper Award, KICS Joint Conference on Communication and Information, 2015</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<div>
+<span class="badge">AI Security</span>
+<span class="badge">Distributed ML</span>
+<span class="badge">Edge Intelligence</span>
+<span class="badge">6G Networks</span>
+<span class="badge">IoT Systems</span>
+</div>
 
-    <section id="contact">
-      <div class="panel">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <strong>Email</strong><br />
-            <a href="mailto:mohammad.hossain@mtsu.edu">mohammad.hossain@mtsu.edu</a>
-          </div>
-          <div class="contact-item">
-            <strong>Phone</strong><br />
-            Office: 615-898-5779
-          </div>
-          <div class="contact-item">
-            <strong>Institution</strong><br />
-            Middle Tennessee State University, Murfreesboro, TN
-          </div>
-        </div>
-        <p style="color: var(--muted); margin-top: 18px; margin-bottom: 0;">
-          Tip: add links here for Google Scholar, LinkedIn, ORCID, GitHub, and your CV PDF before publishing to GitHub Pages.
-        </p>
-      </div>
-    </section>
-  </main>
+<a class="btn primary" href="#publications">Publications</a>
+<a class="btn secondary" href="#contact">Contact</a>
 
-  <footer>
-    <div class="container">
-      © 2026 Mohammad Arif Hossain. Built for GitHub Pages.
-    </div>
-  </footer>
+</div>
+
+
+<div>
+
+<a href="https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en"
+target="_blank"
+class="scholar-btn">
+
+<img src="scholar.svg">
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<section id="about">
+
+<h2>About</h2>
+
+<p>
+Dr. Mohammad Arif Hossain is an Assistant Professor at Middle Tennessee State University.
+His research broadly focuses on distributed edge intelligence, AI-enabled networking,
+cybersecurity, and scalable machine learning systems for next-generation networks.
+</p>
+
+</section>
+
+
+
+<section id="research">
+
+<h2>Research Areas</h2>
+
+<ul>
+<li>AI-enabled cybersecurity</li>
+<li>Distributed and federated machine learning</li>
+<li>Edge intelligence and IoT systems</li>
+<li>Network slicing and edge computing</li>
+<li>AI-native 5G/6G wireless networks</li>
+</ul>
+
+</section>
+
+
+
+<section id="publications">
+
+<h2>Selected Publications</h2>
+
+
+<div class="pub">
+<span class="venue">IEEE TCCN</span>
+Mobile Edge Computing for Multi-services Digital Twin-enabled IoT Heterogeneous Networks,
+IEEE Transactions on Cognitive Communications and Networking, 2025.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE TNSM</span>
+Reinforcement Learning-based Network Slicing Scheme for Optimized UE-QoS in Future Networks,
+IEEE Transactions on Network and Service Management, 2024.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE IoT-J</span>
+Computation-Efficient Offloading and Power Control for MEC in IoT Networks by Meta Reinforcement Learning,
+IEEE Internet of Things Journal, 2024.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE IoT-J</span>
+AI-assisted End-to-End Network Slicing for Integrated Sensing and Communication in 6G Networks,
+IEEE Internet of Things Journal, 2024.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE Network</span>
+A Decentralized Collaborative Learning Approach in 5G+ Core Networks,
+IEEE Network, 2024.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE TCC</span>
+Energy-efficient Federated Edge Learning in Multi-tier NOMA-enabled HetNet,
+IEEE Transactions on Cloud Computing, 2023.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE TCC</span>
+Hybrid Multiple Access for Network Slicing Aware Mobile Edge Computing,
+IEEE Transactions on Cloud Computing, 2023.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE TVT</span>
+Dual-Band Aerial Networks for Priority-Based Traffic,
+IEEE Transactions on Vehicular Technology, 2023.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE TCC</span>
+Network Slicing for NOMA-enabled Edge Computing,
+IEEE Transactions on Cloud Computing, 2023.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE IoT-J</span>
+Numerology-capable UAV-MEC for Future Generation Massive IoT Networks,
+IEEE Internet of Things Journal, 2022.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE Network</span>
+AI in 6G: Energy-Efficient Distributed Machine Learning for Multilayer Heterogeneous Networks,
+IEEE Network, 2022.
+</div>
+
+
+<div class="pub">
+<span class="venue">IEEE TGCN</span>
+Energy Aware Latency Minimization for Network Slicing Enabled Edge Computing,
+IEEE Transactions on Green Communications and Networking, 2021.
+</div>
+
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-item">
+Email: <a href="mailto:mohammad.hossain@mtsu.edu">mohammad.hossain@mtsu.edu</a>
+</div>
+
+<div class="contact-item">
+Office: 615-898-5779
+</div>
+
+<div class="contact-item">
+Middle Tennessee State University<br>
+Murfreesboro, Tennessee
+</div>
+
+</section>
+
+
+
+<footer>
+
+© 2026 Mohammad Arif Hossain
+
+</footer>
+
+
+</div>
+
 </body>
 </html>
