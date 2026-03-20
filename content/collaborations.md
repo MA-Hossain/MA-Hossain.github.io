@@ -10,7 +10,7 @@ collaborators:
     area: ""
     type: "Academic"
 
-  - name: "Wright State University"
+  - name: "Wright State University."
     country: "USA"
     area: ""
     type: "Academic"
