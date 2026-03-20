@@ -1,9 +1,5 @@
 ---
-publications:
-  - venue: IEEE ICC
-    title: "Federated Meta-RL for Network Slicing Aware VNFs Orchestration in 6G Core Networks"
-    journal: "IEEE International Conference on Communications Workshops (ICC Workshops)"
-    year: "2025"
+Significant Publications:
 
   - venue: IEEE ICIP
     title: "Energy-based Generative Models with Morphological Attention Networks for Hyperspectral Image Classification: A Unified Framework"
