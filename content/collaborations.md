@@ -5,7 +5,7 @@ collaborators:
     area: ""
     type: "Academic"
 
-  - name: "Florida State University"
+  - name: "Florida International University"
     country: "USA"
     area: ""
     type: "Academic"
