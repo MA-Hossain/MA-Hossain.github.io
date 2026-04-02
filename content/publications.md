@@ -1,5 +1,5 @@
 ---
-Significant Publications:
+publications:
 
   - venue: IEEE ICIP
     title: "Energy-based Generative Models with Morphological Attention Networks for Hyperspectral Image Classification: A Unified Framework"
