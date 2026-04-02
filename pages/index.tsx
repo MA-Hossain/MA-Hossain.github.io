@@ -145,7 +145,7 @@ const homeJsonLd = [
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "degree",
         educationalLevel: "PhD",
-        name: "Ph.D. in Electrical Engineering",
+        name: "Ph.D. in Computer Science",
         recognizedBy: {
           "@type": "CollegeOrUniversity",
           name: "New Jersey Institute of Technology",
@@ -211,7 +211,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">Ph.D. in Electrical Engineering</p>
+                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">Ph.D. in Computer Science</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400">New Jersey Institute of Technology, USA</p>
                   </div>
                 </div>
