@@ -16,10 +16,9 @@ const badges = [
 
 const news = [
   { date: "Mar 2025", text: "Paper accepted at IEEE TCCN." },
-  { date: "Jan 2025", text: "Joined MTSU as Assistant Professor." },
+  { date: "September 2025", text: "Paper accepted at IEEE ICIP." },
+  { date: "Aug 2024", text: "Joined MTSU as Assistant Professor." },
   { date: "Nov 2024", text: "Paper accepted at IEEE TNSM." },
-  { date: "Sep 2024", text: "Invited reviewer for IEEE IoT Journal." },
-  { date: "Jun 2024", text: "Two papers accepted at IEEE IoT Journal." },
 ];
 
 const researchAreas = [
