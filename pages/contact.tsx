@@ -25,7 +25,7 @@ const contactItems = [
   },
   {
     label: "Office",
-    value: "Applied Engineering Building\nDepartment of Engineering Technology\nMiddle Tennessee State University\n1301 E. Main Street, Murfreesboro, TN 37132",
+    value: "Room. 324, Applied Engineering Building\nDepartment of Engineering Technology\nMiddle Tennessee State University\n1301 E. Main Street, Murfreesboro, TN 37132",
     href: null,
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
