@@ -15,16 +15,16 @@ const badges = [
 
 
 const news = [
-  { date: "Apr 2026", text: "Paper accepted at IEEE TCCN." },  
-  { date: "Sep 2025", text: "Paper accepted at IEEE ICIP." },
-  { date: "Jun 2025", text: "Paper accepted at IEEE TCCN." },
-  { date: "Aug 2024", text: "Joined MTSU as Assistant Professor." },
-  { date: "Feb 2024", text: "Paper accepted at IEEE TNSM." },
-  { date: "Jun 2023", text: "Paper accepted at IEEE TCC." },
-  { date: "Mar 2023", text: "Paper accepted at IEEE TVT." },
-  { date: "Jan 2023", text: "Paper accepted at IEEE TCC." },
-  { date: "Oct 2021", text: "Paper accepted at IEEE TCC." },
-  { date: "May 2021", text: "Paper accepted at IEEE TGCN." },
+  { date: "Apr 2026", text: "Paper accepted at IEEE TCCN" },  
+  { date: "Sep 2025", text: "Paper accepted at IEEE ICIP" },
+  { date: "Jun 2025", text: "Paper accepted at IEEE TCCN" },
+  { date: "Aug 2024", text: "Joined MTSU as Assistant Professor" },
+  { date: "Feb 2024", text: "Paper accepted at IEEE TNSM" },
+  { date: "Jun 2023", text: "Paper accepted at IEEE TCC" },
+  { date: "Mar 2023", text: "Paper accepted at IEEE TVT" },
+  { date: "Jan 2023", text: "Paper accepted at IEEE TCC" },
+  { date: "Oct 2021", text: "Paper accepted at IEEE TCC" },
+  { date: "May 2021", text: "Paper accepted at IEEE TGCN" },
 ];
 
 const researchAreas = [
