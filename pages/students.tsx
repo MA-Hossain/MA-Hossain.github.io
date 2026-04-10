@@ -9,7 +9,7 @@ const currentStudents = [
 
 const requirements = [
   "Strong background in machine learning, wireless communications, or networking",
-  "Experience with Python, PyTorch, TensorFlow, or MATLAB",
+  "Experience with Python, PyTorch, TensorFlow",
   "Interest in next-generation network research (5G/6G, Edge AI, IoT)",
   "Self-motivated with good written and verbal communication skills",
 ];
