@@ -266,7 +266,7 @@ export default function Home() {
             </div>
 
             {/* Photo + News */}
-            <div className="shrink-0 flex flex-col items-center gap-5 w-full sm:w-auto md:w-64">
+            <div className="shrink-0 flex flex-col items-center gap-5 w-full md:w-80">
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full ring-4 ring-blue-100 dark:ring-blue-900 ring-offset-4 ring-offset-white dark:ring-offset-slate-950 overflow-hidden shadow-lg">
                 <Image
                   src="/Profile.jpg"
@@ -279,7 +279,7 @@ export default function Home() {
               </div>
 
               {/* News */}
-              <div className="w-full mt-4 md:mt-10">
+              <div className="w-full">
                 <p className="text-xs font-bold text-slate-700 dark:text-slate-200 uppercase tracking-widest mb-2">News</p>
                 <ul className="space-y-1.5">
                   {news.map((item, i) => (
