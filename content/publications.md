@@ -3,7 +3,8 @@ publications:
 
   - venue: IEEE ICIP
     title: "Energy-based Generative Models with Morphological Attention Networks for Hyperspectral Image Classification: A Unified Framework"
-    journal: "IEEE International Conference on Image Processing (ICIP)"
+    authors: "M. A. Hossain, Y. Sarker, W. Liu, N. Ansari"
+    journal: "2025 IEEE International Conference on Image Processing (ICIP), pp. 2282–2287"
     year: "2025"
 
   - venue: IEEE TCCN
