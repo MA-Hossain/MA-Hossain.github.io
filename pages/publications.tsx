@@ -83,7 +83,6 @@ export default function Publications({ publications }: Props) {
           <div>
             <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-1">Research Output</p>
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">Publications</h1>
-            <p className="text-slate-500 dark:text-slate-400 mt-1.5 text-sm">{publications.length} peer-reviewed publications in IEEE journals &amp; conferences</p>
           </div>
           <a
             href="https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en"
