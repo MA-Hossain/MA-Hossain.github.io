@@ -9,6 +9,7 @@ import { SITE_URL, PERSON } from "../lib/seo";
 type Publication = {
   venue: string;
   title: string;
+  authors?: string;
   journal: string;
   year: string;
 };
@@ -123,7 +124,10 @@ export default function Publications({ publications }: Props) {
                           <p className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-100 leading-snug">
                             {pub.title}
                           </p>
-                          <p className="text-sm text-slate-400 dark:text-slate-500 mt-1">{pub.journal}</p>
+                          {pub.authors && (
+                            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 italic">{pub.authors}</p>
+                          )}
+                          <p className="text-sm text-slate-400 dark:text-slate-500 mt-0.5">{pub.journal}</p>
                         </div>
                       </div>
                     </div>
