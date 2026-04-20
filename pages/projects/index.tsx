@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 
 export default function Projects({ projects }: Props) {
-  const description = `Active research projects in the lab of ${PERSON.name} at ${PERSON.university}, covering federated learning, 6G networks, edge intelligence, UAV-MEC, and AI security.`;
+  const description = `Active research projects in the lab of ${PERSON.name} at ${PERSON.university}, covering federated learning, 6G networks, edge intelligence, agentic AI for UAVs, and AI security.`;
 
   const projectsJsonLd = {
     "@context": "https://schema.org",
