@@ -29,9 +29,9 @@ const news = [
 
 const researchAreas = [
   {
-    title: "AI-Assisted Cybersecurity",
+    title: "Agentic LLM Security",
     description:
-      "Intelligent threat detection and automated defense leveraging ML for distributed edge computing environments.",
+      "Securing agentic LLM systems against prompt injection, tool misuse, and adversarial manipulation, with autonomous defense for multi-agent workflows.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
@@ -196,7 +196,7 @@ export default function Home() {
                 Dr. Mohammad Arif Hossain is an Assistant Professor in the
                 Department of Engineering Technology at Middle Tennessee State
                 University. His research broadly focuses on distributed edge
-                intelligence, AI-assisted cybersecurity, Quantum-assisted ML,
+                intelligence, Agentic LLM Security, Quantum-assisted ML,
                 and AI-native next-generation networks. He has published
                 extensively in top-tier IEEE journals and serves as a reviewer
                 for leading venues in communications and networking. He is a
