@@ -38,41 +38,60 @@ projects:
       - "Multi-agent RL for distributed network slice management"
       - "Diffusion models for radio environment map generation"
 
-  - title: "Digital Twin-enabled MEC for Heterogeneous Networks"
-    slug: "digital-twin-mec"
-    description: "Built a digital twin framework for mobile edge computing supporting multi-service IoT deployments in heterogeneous network environments."
+  - title: "Agentic LLM Security"
+    slug: "agentic-llm-security"
+    description: "Securing agentic LLM systems against prompt injection, tool misuse, and adversarial manipulation, with autonomous defense for multi-agent workflows."
     tags:
-      - Digital Twin
-      - MEC
-      - HetNet
-    overview: "Digital twins provide a real-time virtual replica of physical network infrastructure, enabling predictive optimization, what-if analysis, and proactive failure recovery. This project developed a lightweight digital twin platform tailored for mobile edge computing in heterogeneous IoT networks, enabling operators to simulate and optimize multi-service deployments without disrupting live operations."
+      - LLM Security
+      - Agentic AI
+      - Adversarial ML
+    overview: "As large language models are deployed as autonomous agents that invoke tools, browse the web, and coordinate with other agents, they introduce a new class of attack surfaces spanning prompt injection, tool abuse, memory poisoning, and multi-agent collusion. This project develops threat models, detection mechanisms, and runtime defenses that make agentic LLM systems robust, auditable, and trustworthy in high-stakes deployments."
     objectives:
-      - "Construct accurate digital twin models for MEC servers and IoT end-devices"
-      - "Enable real-time synchronization between physical and virtual network states"
-      - "Use digital twin simulations to pre-optimize task offloading and resource allocation policies"
-      - "Validate twin fidelity under dynamic network conditions and device mobility"
+      - "Characterize attack surfaces unique to tool-using, memory-augmented LLM agents"
+      - "Build runtime monitors that detect prompt injection and anomalous tool invocations"
+      - "Design policy-enforcing guardrails for multi-agent communication and task delegation"
+      - "Develop benchmarks and red-teaming frameworks for evaluating agentic LLM robustness"
     methods:
-      - "Model-based systems engineering for twin construction"
-      - "Online learning for adaptive twin state synchronization"
-      - "Deep Q-Network (DQN) for offloading policy optimization within the twin"
-      - "Trace-driven simulation using real IoT traffic datasets"
+      - "Adversarial prompt generation and automated red-teaming pipelines"
+      - "Information-flow tracking across agent memory, tools, and external content"
+      - "Constrained decoding and policy-based action filtering for safe tool use"
+      - "Reinforcement learning from safety feedback (RLSF) for defensive agent training"
 
-  - title: "UAV-assisted Mobile Edge Computing"
-    slug: "uav-mec"
-    description: "Designed numerology-capable UAV-MEC systems for massive IoT deployments, optimizing task offloading and trajectory planning in dynamic environments."
+  - title: "Agentic AI for UAV"
+    slug: "agentic-ai-uav"
+    description: "Developing agentic AI frameworks that enable UAVs to autonomously plan, reason, and coordinate missions in dynamic airspace and edge environments."
     tags:
       - UAV
-      - MEC
-      - IoT
-    overview: "Unmanned aerial vehicles (UAVs) serving as flying edge servers offer unique flexibility for providing compute and communication services to ground IoT devices in areas without fixed infrastructure. This project designed numerology-aware UAV-MEC architectures that jointly optimize UAV trajectory, computation task offloading decisions, and radio resource allocation to serve massive IoT networks with heterogeneous QoS requirements."
+      - Agentic AI
+      - LLM
+    overview: "Unmanned aerial vehicles (UAVs) are evolving from remotely piloted platforms into autonomous agents capable of perception, reasoning, and cooperative decision-making. This project builds agentic AI systems—grounded in large language models, tool use, and multi-agent planning—that allow UAVs to interpret high-level mission intent, adapt to unforeseen conditions, and coordinate with other aerial and ground agents with minimal human supervision."
     objectives:
-      - "Jointly optimize UAV flight trajectory and offloading decisions under energy and latency constraints"
-      - "Support mixed numerology waveforms to serve diverse IoT service types simultaneously"
-      - "Develop multi-UAV cooperative strategies for large-scale IoT coverage"
-      - "Model and minimize UAV propulsion energy while maintaining coverage guarantees"
+      - "Design LLM-driven planning agents that translate natural-language mission goals into executable UAV task graphs"
+      - "Enable closed-loop perception-reasoning-action cycles for autonomous navigation and task execution"
+      - "Develop multi-agent coordination protocols for swarms of UAVs under communication and energy constraints"
+      - "Ensure safe, verifiable, and policy-compliant behavior of agentic UAVs in shared airspace"
     methods:
-      - "Successive convex approximation (SCA) for non-convex trajectory optimization"
-      - "Multi-numerology OFDM waveform design"
-      - "Deep Deterministic Policy Gradient (DDPG) for continuous trajectory control"
-      - "Lyapunov optimization for online resource management under time-varying channels"
+      - "Tool-augmented LLM agents with memory and reflection for mission planning"
+      - "Hierarchical reinforcement learning coupled with language-based task decomposition"
+      - "Multi-agent communication via structured natural-language protocols"
+      - "Runtime guardrails and formal safety checks for autonomous flight decisions"
+
+  - title: "Quantum-Assisted ML for Next-Generation Networks"
+    slug: "quantum-assisted-ml-nextgen-networks"
+    description: "Exploring quantum and hybrid quantum-classical ML algorithms to accelerate training, enhance expressivity, and tackle optimization bottlenecks in next-generation networks."
+    tags:
+      - Quantum ML
+      - Hybrid Computing
+      - Optimization
+    overview: "As classical machine learning approaches fundamental limits in training cost and optimization complexity, quantum computing offers a promising complement through superposition, entanglement, and quantum parallelism. This project investigates hybrid quantum-classical learning pipelines that embed variational quantum circuits into classical ML workflows to address large-scale optimization, feature encoding, and resource allocation problems arising in wireless networks and edge intelligence."
+    objectives:
+      - "Design variational quantum circuits (VQCs) for classification and regression tasks on edge-scale datasets"
+      - "Develop hybrid quantum-classical optimizers for resource allocation in 6G and edge networks"
+      - "Benchmark quantum kernel methods against classical counterparts for feature-rich wireless data"
+      - "Investigate noise-resilient training strategies suitable for near-term NISQ hardware"
+    methods:
+      - "Variational Quantum Eigensolver (VQE) and QAOA for combinatorial network optimization"
+      - "Parameterized quantum circuits trained with parameter-shift gradients"
+      - "Quantum kernel estimation for support vector machines"
+      - "Hybrid pipelines combining PennyLane/Qiskit simulators with classical deep learning frameworks"
 ---
