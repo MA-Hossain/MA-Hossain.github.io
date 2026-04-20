@@ -25,7 +25,7 @@ export const PERSON = {
   googleScholar:
     "https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en",
   researchAreas: [
-    "AI-Assisted Cybersecurity",
+    "Agentic LLM Security",
     "Distributed Machine Learning",
     "Federated Learning",
     "Edge Intelligence",
@@ -36,7 +36,7 @@ export const PERSON = {
     "Generative AI for Networks",
   ],
   description:
-    "Dr. Mohammad Arif Hossain is an Assistant Professor in the Department of Engineering Technology at Middle Tennessee State University (MTSU). His research focuses on distributed edge intelligence, AI-assisted cybersecurity, federated learning, quantum-assisted ML, and AI-native next-generation (5G/6G) networks. He has published extensively in top-tier IEEE journals and is a Member of IEEE.",
+    "Dr. Mohammad Arif Hossain is an Assistant Professor in the Department of Engineering Technology at Middle Tennessee State University (MTSU). His research focuses on distributed edge intelligence, Agentic LLM Security, federated learning, quantum-assisted ML, and AI-native next-generation (5G/6G) networks. He has published extensively in top-tier IEEE journals and is a Member of IEEE.",
 };
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/Profile.jpg`;
