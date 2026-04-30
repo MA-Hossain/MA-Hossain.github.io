@@ -202,9 +202,6 @@ export default function Home() {
                 for leading venues in communications and networking. He is a
                 Member of IEEE.
               </p>
-              <p className="text-slate-900 dark:text-slate-100 font-bold max-w-xl mb-5">
-                Actively looking for motivated graduate students.
-              </p>
 
               {/* Education */}
               <div className="flex flex-col gap-2 mb-6 max-w-xl">
