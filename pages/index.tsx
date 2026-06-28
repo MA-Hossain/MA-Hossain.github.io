@@ -18,7 +18,7 @@ const news = [
   { date: "Jun 2026", text: "Paper accepted at ACM SIGCOMM 2026 (QuNet WS)" },
   { date: "May 2026", text: "Paper accepted at ICML 2026 (AI4GOOD WS)" },
   { date: "Apr 2026", text: "Paper accepted at IEEE TCCN" },  
-  { date: "Sep 2025", text: "Paper accepted at IEEE ICIP" },
+  { date: "Sep 2025", text: "Paper accepted at IEEE ICIP 2025" },
   { date: "Jun 2025", text: "Paper accepted at IEEE TCCN" },
   { date: "Aug 2024", text: "Joined MTSU as Assistant Professor" },
   { date: "Feb 2024", text: "Paper accepted at IEEE TNSM" },
