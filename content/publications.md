@@ -1,9 +1,21 @@
 ---
 publications:
 
+- venue: ACM SIGCOMM
+    title: "SATLOCK: Handover-Coupled Scheduling for Weather-Resilient Quantum Key Distribution over LEO Constellations"
+    authors: "MA Hossain, MJ Hossain"
+    journal: "Quantum Networks and Distributed Quantum Computing (QuNet'26)@ ACM SIGCOMM 2026"
+    year: "2026"
+
+- venue: IEEE ICML
+    title: "The Containment Gap: How Deployed Agentic AI Frameworks Fail Public-Facing Safety Requirements"
+    authors: "MJ Hossain, MA Hossain, W Liu, N Ansari"
+    journal: "Trustworthy AI for Good (AI4GOOD) Workshop@ ICML 2026"
+    year: "2026"
+
   - venue: IEEE ICIP
     title: "Energy-based Generative Models with Morphological Attention Networks for Hyperspectral Image Classification: A Unified Framework"
-    authors: "M. A. Hossain, Y. Sarker, W. Liu, N. Ansari"
+    authors: "MA Hossain, Y Sarker, W Liu, N Ansari"
     journal: "2025 IEEE International Conference on Image Processing (ICIP), pp. 2282–2287"
     year: "2025"
 
