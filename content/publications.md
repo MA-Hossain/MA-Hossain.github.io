@@ -66,6 +66,7 @@ publications:
 
   - venue: IEEE IoT-J
     title: "Numerology-capable UAV-MEC for Future Generation Massive IoT Networks"
+    
     journal: "IEEE Internet of Things Journal, vol. 9, no. 23, pp. 23860–23868"
     year: "2022"
 
