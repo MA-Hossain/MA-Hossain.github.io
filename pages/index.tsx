@@ -15,6 +15,7 @@ const badges = [
 
 
 const news = [
+  { date: "Jul 2026", text: "Serving as Program Committee member at AAAI 2027" },
   { date: "Jun 2026", text: "Paper accepted at ACM SIGCOMM 2026 (QuNet WS)" },
   { date: "May 2026", text: "Paper accepted at ICML 2026 (AI4GOOD WS)" },
   { date: "Apr 2026", text: "Paper accepted at IEEE TCCN" },  
