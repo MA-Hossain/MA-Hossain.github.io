@@ -4,7 +4,9 @@ import { SITE_URL, PERSON } from "../lib/seo";
 
 const currentStudents = [
   { name: "Sharmin Milu", program: "PhD in Computational Science", research: "", since: "2025" },
+  { name: "Tanzimul Fahim", program: "PhD in Computational Science", research: "", since: "2026" },
   { name: "Yeahia Sarker", program: "MSc in Engineering Technology", research: "", since: "2026" },
+  { name: "Most. Humaira Rime", program: "MSc in Engineering Technology", research: "", since: "2026" },
 ];
 
 const requirements = [
