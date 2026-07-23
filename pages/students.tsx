@@ -10,9 +10,9 @@ const currentStudents = [
 ];
 
 const requirements = [
-  "Strong background in machine learning, wireless communications, or networking",
+  "Strong background in machine learning and quantum computing/autonomous systems/next-generation networking",
   "Experience with Python, PyTorch, TensorFlow",
-  "Interest in next-generation network research (5G/6G, Edge AI, IoT)",
+  "Interest in quantum ML or, next-generation network research (Distributed computing/edge computing/autonomus system)",
   "Self-motivated with good written and verbal communication skills",
 ];
 
