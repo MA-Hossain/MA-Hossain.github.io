@@ -7,9 +7,9 @@ import { SITE_URL, PERSON } from "../lib/seo";
 const badges = [
   "AI Security",
   "Distributed ML",
+  "Intelligent Systems",
   "Edge Intelligence",
   "6G Networks",
-  "IoT Systems",
   "Quantum-assisted ML",
 ];
 
