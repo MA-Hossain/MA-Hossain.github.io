@@ -5,10 +5,10 @@ import { SITE_URL, PERSON } from "../lib/seo";
 import { currentStudents } from "../lib/data";
 
 const requirements = [
-  "Strong foundation in quantum computing, machine learning, or autonomous systems",
-  "Proficiency in Python, C++, and relevant ML frameworks (PyTorch, TensorFlow, or Qiskit)",
-  "Genuine interest in quantum intelligence or autonomous systems research",
-  "Self-motivated, collaborative, and committed to producing high-impact research",
+  "Strong background in machine learning and quantum computing, autonomous systems, or next-generation networking",
+  "Experience with Python, PyTorch, TensorFlow, and Qiskit",
+  "Interest in quantum ML (distributed QML, Quantum computing in SAGIN, autonomous systems)",
+  "Self-motivated with good written and verbal communication skills",
 ];
 
 const checklist = [
@@ -18,7 +18,7 @@ const checklist = [
   "Any relevant publications or projects",
 ];
 
-const studentsDescription = `Graduate research group of ${PERSON.name} at ${PERSON.university}. Actively recruiting motivated students interested in quantum intelligence, autonomous systems, and AI-driven solutions. Join us to conduct impactful research and advance the field.`;
+const studentsDescription = `Graduate research group of ${PERSON.name} at ${PERSON.university}. We are looking for motivated M.S. students in quantum-assisted ML and Autonomous Systems.`;
 
 const studentsJsonLd = {
   "@context": "https://schema.org",
@@ -80,7 +80,7 @@ export default function Students() {
         <section className="mb-12">
           <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">Prospective students</h2>
           <p className="text-sm text-stone-600 dark:text-stone-400 mb-3">
-            I am actively seeking motivated graduate students interested in quantum intelligence and autonomous systems research. If you are passionate about making an impact in cutting-edge research, ideal candidates have:
+            I am actively seeking motivated Ph.D. and M.S. students interested in edge intelligence, AI security, and next-generation networks. Ideal candidates have:
           </p>
           <ul className="space-y-1.5">
             {requirements.map((item) => (
@@ -106,7 +106,7 @@ export default function Students() {
               </li>
             ))}
           </ul>
-          
+          <a
             href="mailto:mohammad.hossain@mtsu.edu?subject=Graduate Admission Inquiry"
             className="text-sm font-medium text-teal-700 dark:text-teal-400 hover:underline"
           >
