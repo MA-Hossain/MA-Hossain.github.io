@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 function VenueBadge({ venue }: { venue: string }) {
   return (
-    <span className="shrink-0 bg-blue-600 dark:bg-blue-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-md tracking-wide">
+    <span className="shrink-0 bg-teal-600 dark:bg-teal-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-md tracking-wide">
       {venue}
     </span>
   );
@@ -43,7 +43,7 @@ export default function Publications({ publications }: Props) {
     "@type": "CollectionPage",
     "@id": `${SITE_URL}/publications#page`,
     url: `${SITE_URL}/publications`,
-    name: `Publications — ${PERSON.name}`,
+    name: `Publications | ${PERSON.name}`,
     description: pubsDescription,
     author: {
       "@type": "Person",
@@ -78,18 +78,18 @@ export default function Publications({ publications }: Props) {
         path="/publications"
         jsonLd={pubsJsonLd}
       />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 sm:py-18">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
-            <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-1">Research Output</p>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">Publications</h1>
+            <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Research Output</p>
+            <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Publications</h1>
           </div>
           <a
             href="https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 px-4 py-2.5 rounded-lg transition-colors shadow-sm shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-teal-700 dark:bg-teal-600 hover:bg-teal-800 dark:hover:bg-teal-700 px-4 py-2.5 rounded-lg transition-colors shadow-sm shrink-0"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
@@ -104,30 +104,30 @@ export default function Publications({ publications }: Props) {
             <div key={year} className="flex gap-6 md:gap-10">
               {/* Year marker */}
               <div className="hidden sm:flex flex-col items-end gap-2 pt-1 w-12 shrink-0">
-                <span className="text-sm font-bold text-slate-900 dark:text-slate-100">{year}</span>
-                <div className="w-px flex-1 bg-slate-200 dark:bg-slate-700 mx-auto"></div>
+                <span className="text-sm font-bold text-stone-900 dark:text-stone-100">{year}</span>
+                <div className="w-px flex-1 bg-stone-200 dark:bg-stone-800 mx-auto"></div>
               </div>
 
               {/* Papers */}
               <div className="flex-1 space-y-3">
-                <p className="sm:hidden text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">{year}</p>
+                <p className="sm:hidden text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-widest mb-3">{year}</p>
                 {publications
                   .filter((p) => p.year === year)
                   .map((pub, i) => (
                     <div
                       key={i}
-                      className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600 transition-all"
+                      className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-4 hover:shadow-sm hover:border-stone-300 dark:hover:border-stone-700 transition-all"
                     >
                       <div className="flex flex-wrap items-start gap-2.5">
                         <VenueBadge venue={pub.venue} />
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-100 leading-snug">
+                          <p className="text-xs sm:text-sm font-medium text-stone-800 dark:text-stone-100 leading-snug">
                             {pub.title}
                           </p>
                           {pub.authors && (
-                            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 italic">{pub.authors}</p>
+                            <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 italic">{pub.authors}</p>
                           )}
-                          <p className="text-sm text-slate-400 dark:text-slate-500 mt-0.5">{pub.journal}</p>
+                          <p className="text-sm text-stone-400 dark:text-stone-500 mt-0.5">{pub.journal}</p>
                         </div>
                       </div>
                     </div>

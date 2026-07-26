@@ -65,7 +65,7 @@ const contactJsonLd = {
   "@type": "ContactPage",
   "@id": `${SITE_URL}/contact#page`,
   url: `${SITE_URL}/contact`,
-  name: `Contact — ${PERSON.name}`,
+  name: `Contact | ${PERSON.name}`,
   description: contactDescription,
   mainEntity: {
     "@type": "Person",
@@ -108,65 +108,61 @@ export default function Contact() {
         path="/contact"
         jsonLd={contactJsonLd}
       />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-14 sm:py-18">
         <div className="mb-12">
-          <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-1">Get in Touch</p>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">Contact</h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1.5 text-sm">
+          <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Get in Touch</p>
+          <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Contact</h1>
+          <p className="text-stone-500 dark:text-stone-400 mt-2 text-sm">
             Reach out for research inquiries, collaboration proposals, or graduate admissions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          {/* Left column */}
-          <div className="lg:col-span-5 space-y-5">
-            {/* Contact details */}
-            <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6">
-              <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide mb-5">Contact Details</h2>
-              <div className="space-y-5">
-                {contactItems.map((item) => (
-                  <div key={item.label} className="flex gap-3.5">
-                    <div className="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wide mb-0.5">{item.label}</p>
-                      {item.href ? (
-                        <a href={item.href} className="text-sm text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="text-sm text-slate-600 dark:text-slate-300 whitespace-pre-line">{item.value}</p>
-                      )}
-                    </div>
+        <div className="space-y-5">
+          {/* Contact details */}
+          <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6">
+            <h2 className="text-sm font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wide mb-5">Contact Details</h2>
+            <div className="space-y-5">
+              {contactItems.map((item) => (
+                <div key={item.label} className="flex gap-3.5">
+                  <div className="w-9 h-9 rounded-lg bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-400 flex items-center justify-center shrink-0">
+                    {item.icon}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Online profiles */}
-            <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6">
-              <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide mb-4">Online Profiles</h2>
-              <div className="space-y-1">
-                {profiles.map((p) => (
-                  <a
-                    key={p.label}
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group"
-                  >
-                    <span className="text-slate-400 dark:text-slate-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{p.icon}</span>
-                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{p.label}</span>
-                    <svg className="w-3.5 h-3.5 text-slate-300 dark:text-slate-600 ml-auto group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                ))}
-              </div>
+                  <div>
+                    <p className="text-xs font-semibold text-stone-400 dark:text-stone-500 uppercase tracking-wide mb-0.5">{item.label}</p>
+                    {item.href ? (
+                      <a href={item.href} className="text-sm text-stone-800 dark:text-stone-200 hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-stone-600 dark:text-stone-300 whitespace-pre-line">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
+          {/* Online profiles */}
+          <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6">
+            <h2 className="text-sm font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wide mb-4">Online Profiles</h2>
+            <div className="space-y-1">
+              {profiles.map((p) => (
+                <a
+                  key={p.label}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors group"
+                >
+                  <span className="text-stone-400 dark:text-stone-500 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">{p.icon}</span>
+                  <span className="text-sm font-medium text-stone-700 dark:text-stone-300 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">{p.label}</span>
+                  <svg className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 ml-auto group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

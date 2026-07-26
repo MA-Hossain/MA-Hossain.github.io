@@ -24,6 +24,8 @@ export const PERSON = {
   },
   googleScholar:
     "https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en",
+  labName: "MTSU Intelligent Systems and Computing Lab",
+  labShortName: "ISC Lab",
   researchAreas: [
     "Agentic LLM Security",
     "Distributed Machine Learning",

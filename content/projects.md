@@ -64,7 +64,7 @@ projects:
       - UAV
       - Agentic AI
       - LLM
-    overview: "Unmanned aerial vehicles (UAVs) are evolving from remotely piloted platforms into autonomous agents capable of perception, reasoning, and cooperative decision-making. This project builds agentic AI systems—grounded in large language models, tool use, and multi-agent planning—that allow UAVs to interpret high-level mission intent, adapt to unforeseen conditions, and coordinate with other aerial and ground agents with minimal human supervision."
+    overview: "Unmanned aerial vehicles (UAVs) are evolving from remotely piloted platforms into autonomous agents capable of perception, reasoning, and cooperative decision-making. This project builds agentic AI systems, grounded in large language models, tool use, and multi-agent planning, that allow UAVs to interpret high-level mission intent, adapt to unforeseen conditions, and coordinate with other aerial and ground agents with minimal human supervision."
     objectives:
       - "Design LLM-driven planning agents that translate natural-language mission goals into executable UAV task graphs"
       - "Enable closed-loop perception-reasoning-action cycles for autonomous navigation and task execution"

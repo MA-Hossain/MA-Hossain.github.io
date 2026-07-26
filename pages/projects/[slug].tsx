@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 };
 
 const accentPalettes = [
-  { headerBg: "bg-blue-50 dark:bg-blue-950/40",      headerBorder: "border-blue-200 dark:border-blue-800",      badge: "bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800",      icon: "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400",      dot: "bg-blue-500",      back: "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" },
+  { headerBg: "bg-cyan-50 dark:bg-cyan-950/40",      headerBorder: "border-cyan-200 dark:border-cyan-800",      badge: "bg-cyan-100 dark:bg-cyan-900/60 text-cyan-700 dark:text-cyan-300 border-cyan-200 dark:border-cyan-800",      icon: "bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-400",      dot: "bg-cyan-500",      back: "text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-200" },
   { headerBg: "bg-violet-50 dark:bg-violet-950/40",  headerBorder: "border-violet-200 dark:border-violet-800",  badge: "bg-violet-100 dark:bg-violet-900/60 text-violet-700 dark:text-violet-300 border-violet-200 dark:border-violet-800",  icon: "bg-violet-100 dark:bg-violet-900 text-violet-600 dark:text-violet-400",  dot: "bg-violet-500", back: "text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-200" },
   { headerBg: "bg-teal-50 dark:bg-teal-950/40",      headerBorder: "border-teal-200 dark:border-teal-800",      badge: "bg-teal-100 dark:bg-teal-900/60 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-800",      icon: "bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-400",      dot: "bg-teal-500",   back: "text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-200" },
   { headerBg: "bg-orange-50 dark:bg-orange-950/40",  headerBorder: "border-orange-200 dark:border-orange-800",  badge: "bg-orange-100 dark:bg-orange-900/60 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",  icon: "bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400",  dot: "bg-orange-500", back: "text-orange-600 dark:text-orange-400 hover:text-orange-800 dark:hover:text-orange-200" },
@@ -94,7 +94,7 @@ export default function ProjectDetail({ project, accentIndex }: Props) {
         path={`/projects/${project.slug}`}
         jsonLd={projectJsonLd}
       />
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-14 sm:py-18">
 
         {/* Back link */}
         <Link
@@ -116,37 +116,37 @@ export default function ProjectDetail({ project, accentIndex }: Props) {
               </span>
             ))}
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50 leading-snug mb-4">
+          <h1 className="font-serif text-2xl sm:text-3xl font-medium text-stone-900 dark:text-stone-50 leading-snug mb-4">
             {project.title}
           </h1>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-[15px]">
+          <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-[15px]">
             {project.overview}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Objectives */}
-          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6">
+          <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6">
             <div className="flex items-center gap-2.5 mb-5">
               <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${accent.icon}`}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h2 className="font-semibold text-slate-900 dark:text-slate-100">Research Objectives</h2>
+              <h2 className="font-semibold text-stone-900 dark:text-stone-100">Research Objectives</h2>
             </div>
             <ul className="space-y-3">
               {project.objectives.map((obj, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-2 ${accent.dot}`} />
-                  <span className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{obj}</span>
+                  <span className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">{obj}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Methods */}
-          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6">
+          <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6">
             <div className="flex items-center gap-2.5 mb-5">
               <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${accent.icon}`}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,13 +154,13 @@ export default function ProjectDetail({ project, accentIndex }: Props) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h2 className="font-semibold text-slate-900 dark:text-slate-100">Methods & Techniques</h2>
+              <h2 className="font-semibold text-stone-900 dark:text-stone-100">Methods & Techniques</h2>
             </div>
             <ul className="space-y-3">
               {project.methods.map((method, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-2 ${accent.dot}`} />
-                  <span className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{method}</span>
+                  <span className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">{method}</span>
                 </li>
               ))}
             </ul>
@@ -168,14 +168,14 @@ export default function ProjectDetail({ project, accentIndex }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="mt-8 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mt-8 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <p className="font-semibold text-slate-900 dark:text-slate-100 mb-0.5">Interested in this research?</p>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Get in touch to discuss collaboration or graduate opportunities.</p>
+            <p className="font-semibold text-stone-900 dark:text-stone-100 mb-0.5">Interested in this research?</p>
+            <p className="text-sm text-stone-500 dark:text-stone-400">Get in touch to discuss collaboration or graduate opportunities.</p>
           </div>
           <a
             href="mailto:mohammad.hossain@mtsu.edu"
-            className="shrink-0 inline-flex items-center gap-2 bg-blue-600 dark:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
+            className="shrink-0 inline-flex items-center gap-2 bg-teal-700 dark:bg-teal-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-teal-800 dark:hover:bg-teal-700 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

@@ -1,4 +1,4 @@
-# Mohammad Arif Hossain — Academic Website
+# Mohammad Arif Hossain Academic Website
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
@@ -10,10 +10,10 @@ Personal academic website for Dr. Mohammad Arif Hossain, Assistant Professor in 
 
 ## Stack
 
-- **Next.js 16** — Pages Router, static export (`output: export`)
+- **Next.js 16**: Pages Router, static export (`output: export`)
 - **TypeScript**
 - **Tailwind CSS v4**
-- **Markdown + gray-matter** — content managed via `content/*.md` files
+- **Markdown + gray-matter**: content managed via `content/*.md` files
 
 ## Local Development
 
@@ -24,17 +24,27 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home, profile summary, focus areas, recent news |
+| `/lab` | Lab overview, focus areas, and current members |
+| `/publications` | Publication list grouped by year |
+| `/projects` | Research project directory and detail pages |
+| `/students` | Current students, prospective openings, and how to apply |
+| `/contact` | Contact details and online profiles |
+
 ## Content
 
-All site content lives in `content/`:
+Site content that changes often lives in `content/`:
 
 | File | Description |
 |---|---|
 | `publications.md` | Selected publications list |
 | `projects.md` | Research projects |
-| `collaborations.md` | Academic & industry collaborators |
 
-Edit these YAML/Markdown files to update content without touching code.
+Edit these YAML/Markdown files to update content without touching code. Static profile data (name, address, research areas) lives in `lib/seo.ts`, and lab members and focus areas live in `lib/data.tsx`.
 
 ## Deploy to GitHub Pages
 
@@ -55,12 +65,12 @@ Skip this step if deploying to a custom domain or user/org page (`https://<usern
 
 ### 2. Enable GitHub Pages (GitHub Actions source)
 
-In the repository **Settings → Pages**:
+In the repository **Settings > Pages**:
 - Source: **GitHub Actions**
 
 ### 3. Push to `main`
 
-The included `.github/workflows/deploy.yml` will automatically:
+The included `.github/workflows/nextjs.yml` will automatically:
 1. Install dependencies
 2. Run `npm run build` (outputs static files to `out/`)
 3. Upload and deploy to GitHub Pages

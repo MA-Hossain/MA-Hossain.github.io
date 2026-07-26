@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/lab", label: "Lab" },
   { href: "/publications", label: "Publications" },
   { href: "/projects", label: "Projects" },
   { href: "/students", label: "Students" },
@@ -23,7 +24,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="w-9 h-9 flex items-center justify-center rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800 transition-colors"
+      className="w-9 h-9 flex items-center justify-center rounded-md text-stone-500 hover:text-stone-800 hover:bg-stone-100 dark:text-stone-400 dark:hover:text-stone-200 dark:hover:bg-stone-800 transition-colors"
       aria-label="Toggle theme"
     >
       {resolvedTheme === "dark" ? (
@@ -48,11 +49,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <header className="sticky top-0 z-50 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
         <Link
           href="/"
-          className="font-semibold text-slate-900 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm sm:text-[15px] tracking-tight shrink-0 min-w-0 truncate max-w-[180px] sm:max-w-none"
+          className="font-semibold text-stone-900 dark:text-stone-100 hover:text-teal-600 dark:hover:text-teal-400 transition-colors text-sm sm:text-[15px] tracking-tight shrink-0 min-w-0 truncate max-w-[180px] sm:max-w-none"
         >
           Mohammad Arif Hossain
         </Link>
@@ -67,8 +68,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   active
-                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    ? "text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-950"
+                    : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800"
                 }`}
               >
                 {link.label}
@@ -81,7 +82,7 @@ export default function Navbar() {
           <ThemeToggle />
           {/* Mobile toggle */}
           <button
-            className="lg:hidden w-9 h-9 flex items-center justify-center rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="lg:hidden w-9 h-9 flex items-center justify-center rounded-md text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -100,7 +101,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <nav className="lg:hidden bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 px-4 py-3 flex flex-col gap-1">
+        <nav className="lg:hidden bg-stone-50 dark:bg-stone-950 border-t border-stone-100 dark:border-stone-800 px-4 py-3 flex flex-col gap-1">
           {navLinks.map((link) => {
             const active = router.pathname === link.href;
             return (
@@ -110,8 +111,8 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   active
-                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800"
+                    ? "text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-950"
+                    : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-50 dark:hover:bg-stone-800"
                 }`}
               >
                 {link.label}

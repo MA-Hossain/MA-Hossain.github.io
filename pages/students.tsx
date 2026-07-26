@@ -1,18 +1,13 @@
+import Link from "next/link";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { SITE_URL, PERSON } from "../lib/seo";
-
-const currentStudents = [
-  { name: "Sharmin Milu", program: "PhD in Computational Science", research: "", since: "2025" },
-  { name: "Tanzimul Fahim", program: "PhD in Computational Science", research: "", since: "2026" },
-  { name: "Yeahia Sarker", program: "MSc in Engineering Technology", research: "", since: "2026" },
-  { name: "Most. Humaira Rime", program: "MSc in Engineering Technology", research: "", since: "2026" },
-];
+import { currentStudents } from "../lib/data";
 
 const requirements = [
-  "Strong background in machine learning and quantum computing/autonomous systems/next-generation networking",
-  "Experience with Python, PyTorch, TensorFlow",
-  "Interest in quantum ML or, next-generation network research (Distributed computing/edge computing/autonomus system)",
+  "Strong background in machine learning and quantum computing, autonomous systems, or next-generation networking",
+  "Experience with Python, PyTorch, and TensorFlow",
+  "Interest in quantum ML or next-generation network research (distributed computing, edge computing, autonomous systems)",
   "Self-motivated with good written and verbal communication skills",
 ];
 
@@ -30,7 +25,7 @@ const studentsJsonLd = {
   "@type": "WebPage",
   "@id": `${SITE_URL}/students#page`,
   url: `${SITE_URL}/students`,
-  name: `Students & Research Group — ${PERSON.name}`,
+  name: `Students and Research Group | ${PERSON.name}`,
   description: studentsDescription,
   about: {
     "@type": "Person",
@@ -55,23 +50,26 @@ export default function Students() {
         path="/students"
         jsonLd={studentsJsonLd}
       />
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
-        <div className="mb-10">
-          <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-1">Research Group</p>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">Students</h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1.5 text-sm">Current graduate students and prospective openings.</p>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14 sm:py-18">
+        <div className="mb-12">
+          <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Research Group</p>
+          <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Students</h1>
+          <p className="text-stone-500 dark:text-stone-400 mt-2 text-sm">
+            Current graduate students and prospective openings in the{" "}
+            <Link href="/lab" className="text-teal-700 dark:text-teal-400 hover:underline">{PERSON.labShortName}</Link>.
+          </p>
         </div>
 
         {/* Current Students */}
-        <section className="mb-10">
-          <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">Current Students</h2>
+        <section className="mb-12">
+          <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-4">Current students</h2>
           <ul className="space-y-2">
-            {currentStudents.map((s, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
-                <span className="text-slate-400 mt-0.5">•</span>
+            {currentStudents.map((s) => (
+              <li key={s.name} className="flex items-start gap-2 text-sm text-stone-700 dark:text-stone-300">
+                <span className="text-stone-400 mt-0.5">•</span>
                 <span>
                   <span className="font-medium">{s.name}</span>
-                  <span className="text-slate-500 dark:text-slate-400">, {s.program}{s.research ? ` — ${s.research}` : ""} ({s.since})</span>
+                  <span className="text-stone-500 dark:text-stone-400">, {s.program} (since {s.since})</span>
                 </span>
               </li>
             ))}
@@ -79,15 +77,15 @@ export default function Students() {
         </section>
 
         {/* Prospective Students */}
-        <section className="mb-10">
-          <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Prospective Students</h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+        <section className="mb-12">
+          <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">Prospective students</h2>
+          <p className="text-sm text-stone-600 dark:text-stone-400 mb-3">
             I am actively seeking motivated Ph.D. and M.S. students interested in edge intelligence, AI security, and next-generation networks. Ideal candidates have:
           </p>
           <ul className="space-y-1.5">
             {requirements.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
-                <span className="text-slate-400 mt-0.5">•</span>
+              <li key={item} className="flex items-start gap-2 text-sm text-stone-700 dark:text-stone-300">
+                <span className="text-stone-400 mt-0.5">•</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -96,23 +94,23 @@ export default function Students() {
 
         {/* How to Apply */}
         <section>
-          <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">How to Apply</h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+          <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">How to apply</h2>
+          <p className="text-sm text-stone-600 dark:text-stone-400 mb-3">
             Send an email to Dr. Hossain with the following:
           </p>
-          <ul className="space-y-1.5 mb-4">
+          <ul className="space-y-1.5 mb-5">
             {checklist.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
-                <span className="text-slate-400 mt-0.5">•</span>
+              <li key={item} className="flex items-start gap-2 text-sm text-stone-700 dark:text-stone-300">
+                <span className="text-stone-400 mt-0.5">•</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
           <a
             href="mailto:mohammad.hossain@mtsu.edu?subject=Graduate Admission Inquiry"
-            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-sm font-medium text-teal-700 dark:text-teal-400 hover:underline"
           >
-            mohammad.hossain@mtsu.edu →
+            mohammad.hossain@mtsu.edu &#8594;
           </a>
         </section>
       </div>

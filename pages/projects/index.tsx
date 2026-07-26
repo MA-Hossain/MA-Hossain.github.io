@@ -32,7 +32,7 @@ export default function Projects({ projects }: Props) {
     "@type": "CollectionPage",
     "@id": `${SITE_URL}/projects#page`,
     url: `${SITE_URL}/projects`,
-    name: `Research Projects — ${PERSON.name}`,
+    name: `Research Projects | ${PERSON.name}`,
     description,
     author: {
       "@type": "Person",
@@ -64,11 +64,11 @@ export default function Projects({ projects }: Props) {
         path="/projects"
         jsonLd={projectsJsonLd}
       />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 sm:py-18">
         <div className="mb-12">
-          <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-1">Lab Research</p>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">Projects</h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1.5 text-sm">Research initiatives in the lab.</p>
+          <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Lab Research</p>
+          <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Projects</h1>
+          <p className="text-stone-500 dark:text-stone-400 mt-2 text-sm">Research initiatives in the lab.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -76,25 +76,25 @@ export default function Projects({ projects }: Props) {
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 transition-all hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600 flex flex-col"
+              className="group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 transition-all hover:shadow-sm hover:border-stone-300 dark:hover:border-stone-700 flex flex-col"
             >
               <div className="flex items-start justify-between gap-2 mb-2">
-                <h3 className="font-semibold text-[15px] text-slate-900 dark:text-slate-100 leading-snug">
+                <h3 className="font-semibold text-[15px] text-stone-900 dark:text-stone-100 leading-snug">
                   {project.title}
                 </h3>
                 <svg
-                  className="w-4 h-4 shrink-0 mt-0.5 text-slate-400 dark:text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  className="w-4 h-4 shrink-0 mt-0.5 text-stone-400 dark:text-stone-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-1">
+              <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4 flex-1">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="text-xs font-medium px-2.5 py-0.5 rounded-full border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                  <span key={tag} className="text-xs font-medium px-2.5 py-0.5 rounded-full border border-stone-200 dark:border-stone-700 text-stone-500 dark:text-stone-400">
                     {tag}
                   </span>
                 ))}
