@@ -13,7 +13,7 @@ export const researchAreas = [
   {
     title: "Distributed Machine Learning",
     description:
-      "Federated and collaborative learning architectures that enable private, efficient model training across edge nodes.",
+      "Collaborative and privacy-aware distributed learning architectures that enable efficient model training across edge nodes.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
@@ -57,7 +57,7 @@ export const researchAreas = [
   {
     title: "Quantum-Assisted ML",
     description:
-      "Quantum computing paradigms to accelerate ML model training and optimization in next-generation wireless systems.",
+      "Quantum computing paradigms to accelerate ML model training and optimization in next-generation networks.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}

@@ -18,7 +18,7 @@ const checklist = [
   "Any relevant publications or projects",
 ];
 
-const studentsDescription = `Graduate research group of ${PERSON.name} at ${PERSON.university}. Recruiting motivated Ph.D. and M.S. students in edge intelligence, AI security, federated learning, and 5G/6G networks.`;
+const studentsDescription = `Graduate research group of ${PERSON.name} at ${PERSON.university}. Recruiting motivated Ph.D. and M.S. students in edge intelligence, AI security, quantum-assisted ML, and 5G/6G networks.`;
 
 const studentsJsonLd = {
   "@context": "https://schema.org",

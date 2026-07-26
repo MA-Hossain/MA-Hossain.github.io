@@ -53,18 +53,19 @@ export default function Lab() {
           <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-3">
             Research Group
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-stone-900 dark:text-stone-50 tracking-tight leading-tight mb-4">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-stone-900 dark:text-stone-50 tracking-tight leading-tight mb-2">
             {PERSON.labName}
           </h1>
+          <p className="text-teal-700 dark:text-teal-400 text-sm font-medium mb-4">{PERSON.labExpansion}</p>
           <p className="text-stone-500 dark:text-stone-400 text-base mb-6">
             Directed by Dr. Mohammad Arif Hossain, {PERSON.department}, {PERSON.university}
           </p>
           <p className="text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl text-[15px]">
             The lab brings together graduate students and collaborators working
             on the boundary between intelligent systems and next-generation
-            networks. Current work spans agentic AI safety, federated and
-            distributed learning, mobile edge intelligence, and quantum-assisted
-            approaches to hard optimization problems in wireless systems.
+            networks. Current work spans agentic AI safety, distributed and
+            collaborative learning, mobile edge intelligence, and quantum-assisted
+            approaches to hard optimization problems in next-generation networks.
           </p>
         </div>
       </section>

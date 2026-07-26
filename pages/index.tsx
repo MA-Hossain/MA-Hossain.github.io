@@ -1,3 +1,7 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
@@ -5,21 +9,38 @@ import SEO from "../components/SEO";
 import { SITE_URL, PERSON } from "../lib/seo";
 import { researchAreas } from "../lib/data";
 
-const news = [
+type Publication = {
+  venue: string;
+  title: string;
+  authors?: string;
+  journal: string;
+  year: string;
+  date?: string;
+};
+
+type Props = { publications: Publication[] };
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const filePath = path.join(process.cwd(), "content", "publications.md");
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data } = matter(raw);
+  return { props: { publications: data.publications as Publication[] } };
+};
+
+const milestones = [
   { date: "Jul 2026", text: "Serving as Program Committee member at AAAI 2027" },
-  { date: "Jun 2026", text: "Paper accepted at ACM SIGCOMM 2026 (QuNet WS)" },
-  { date: "May 2026", text: "Paper accepted at ICML 2026 (AI4GOOD WS)" },
-  { date: "Apr 2026", text: "Paper accepted at IEEE TCCN" },  
-  { date: "Sep 2025", text: "Paper accepted at IEEE ICIP 2025" },
-  { date: "Jun 2025", text: "Paper accepted at IEEE TCCN" },
   { date: "Aug 2024", text: "Joined MTSU as Assistant Professor" },
-  { date: "Feb 2024", text: "Paper accepted at IEEE TNSM" },
-  { date: "Jun 2023", text: "Paper accepted at IEEE TCC" },
-  { date: "Mar 2023", text: "Paper accepted at IEEE TVT" },
-  { date: "Jan 2023", text: "Paper accepted at IEEE TCC" },
-  { date: "Oct 2021", text: "Paper accepted at IEEE TCC" },
-  { date: "May 2021", text: "Paper accepted at IEEE TGCN" },
 ];
+
+const monthIndex: Record<string, number> = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+};
+
+function dateSortKey(date: string): number {
+  const [mon, yr] = date.split(" ");
+  return Number(yr) * 12 + (monthIndex[mon] ?? 0);
+}
 
 const homeJsonLd = [
   {
@@ -92,7 +113,15 @@ const homeJsonLd = [
   },
 ];
 
-export default function Home() {
+export default function Home({ publications }: Props) {
+  const publicationNews = publications
+    .filter((p) => p.date)
+    .map((p) => ({ kind: "publication" as const, date: p.date as string, publication: p }));
+  const milestoneNews = milestones.map((m) => ({ kind: "milestone" as const, date: m.date, text: m.text }));
+  const newsFeed = [...publicationNews, ...milestoneNews].sort(
+    (a, b) => dateSortKey(b.date) - dateSortKey(a.date)
+  );
+
   return (
     <Layout>
       <SEO
@@ -215,14 +244,32 @@ export default function Home() {
 
       {/* Recent News */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20">
           <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Recent Activity</p>
           <h2 className="font-serif text-2xl sm:text-3xl font-medium text-stone-900 dark:text-stone-50 mb-8">News</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-            {news.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-sm text-stone-600 dark:text-stone-400 py-2 border-b border-stone-100 dark:border-stone-900">
-                <span className="font-semibold text-stone-800 dark:text-stone-200 shrink-0 w-16">{item.date}</span>
-                <span>{item.text}</span>
+          <ul className="space-y-4">
+            {newsFeed.map((item, i) => (
+              <li key={i} className="flex gap-4 sm:gap-6">
+                <span className="text-xs font-semibold text-stone-400 dark:text-stone-500 uppercase tracking-wide shrink-0 w-14 pt-0.5">{item.date}</span>
+                {item.kind === "milestone" ? (
+                  <p className="text-sm text-stone-600 dark:text-stone-300 pt-0.5">{item.text}</p>
+                ) : (
+                  <div className="flex-1 min-w-0 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-4">
+                    <div className="flex flex-wrap items-start gap-2">
+                      <span className="shrink-0 bg-teal-700 dark:bg-teal-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md tracking-wide">
+                        {item.publication.venue}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-stone-800 dark:text-stone-100 leading-snug">
+                          New publication: {item.publication.title}
+                        </p>
+                        {item.publication.authors && (
+                          <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 italic">{item.publication.authors}</p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ul>

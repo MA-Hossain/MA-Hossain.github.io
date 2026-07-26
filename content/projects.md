@@ -1,24 +1,5 @@
 ---
 projects:
-  - title: "Federated Learning for Privacy-Preserving IoT"
-    slug: "federated-learning-iot"
-    description: "Designing energy-efficient federated learning frameworks for heterogeneous IoT networks, enabling collaborative model training without raw data sharing."
-    tags:
-      - Federated Learning
-      - IoT
-      - Privacy
-    overview: "The proliferation of IoT devices generates enormous volumes of sensitive data at the network edge. This project develops communication-efficient and privacy-preserving federated learning protocols that allow IoT devices to collaboratively train models without centralizing data, addressing both privacy regulations and bandwidth constraints inherent to IoT deployments."
-    objectives:
-      - "Minimize communication overhead in federated rounds across heterogeneous IoT hardware"
-      - "Incorporate differential privacy guarantees while preserving model utility"
-      - "Handle statistical heterogeneity (non-IID data) across geographically distributed IoT nodes"
-      - "Design hierarchical aggregation strategies for multi-tier IoT network topologies"
-    methods:
-      - "Differential privacy mechanisms (Gaussian and Laplace noise injection)"
-      - "Gradient compression and sparsification for bandwidth efficiency"
-      - "Asynchronous federated optimization for slow or intermittent IoT clients"
-      - "Secure aggregation protocols to prevent model inversion attacks"
-
   - title: "AI-Native 6G Network Architecture"
     slug: "ai-native-6g"
     description: "Integrating AI/ML natively into 6G network layers for adaptive resource management, dynamic network slicing, and integrated sensing and communication (ISAC)."
