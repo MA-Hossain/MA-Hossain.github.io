@@ -80,7 +80,7 @@ export default function Students() {
         <section className="mb-12">
           <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">Prospective students</h2>
           <p className="text-sm text-stone-600 dark:text-stone-400 mb-3">
-            I am actively seeking motivated Ph.D. and M.S. students interested in edge intelligence, AI security, and next-generation networks. Ideal candidates have:
+            We are seeking motivated M.S. students interested in Quantum-assisted Machine Learning and Autonomous Systems. Ideal candidates have:
           </p>
           <ul className="space-y-1.5">
             {requirements.map((item) => (
