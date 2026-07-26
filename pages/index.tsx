@@ -147,14 +147,15 @@ export default function Home({ publications }: Props) {
                 Department of Engineering Technology · Middle Tennessee State University
               </p>
               <p className="text-stone-600 dark:text-stone-300 leading-relaxed max-w-xl mb-6 text-[15px]">
-                Dr. Mohammad Arif Hossain is an Assistant Professor in the
-                Department of Engineering Technology at Middle Tennessee State
-                University, where he directs the {PERSON.labName}. His research
-                focuses on distributed edge intelligence, agentic LLM security,
-                quantum-assisted machine learning, and AI-native next-generation
-                networks. He has published extensively in top-tier IEEE journals
-                and serves as a reviewer for leading venues in communications and
-                networking. He is a member of IEEE.
+                Dr. Mohammad Arif Hossain is an Assistant Professor in the 
+                Department of Engineering Technology at Middle Tennessee State 
+                University, where he directs the {PERSON.labName}. His research 
+                focuses on distributed edge intelligence, agentic LLM security, 
+                quantum-assisted machine learning, and AI-native next-generation networks. 
+                He has published in top-tier venues, including IEEE Transactions on Cloud 
+                Computing and IEEE Transactions on Cognitive Communications and Networking. 
+                He serves as a Program Committee member (e.g., AAAI) and reviewer for top AI 
+                and networking venues. He is a member of IEEE.
               </p>
 
               {/* Education */}
