@@ -131,8 +131,8 @@ export default function Lab() {
             <div>
               <h2 className="font-semibold text-stone-900 dark:text-stone-100 mb-1.5">Join the lab</h2>
               <p className="text-sm text-stone-500 dark:text-stone-400 max-w-lg">
-                We are recruiting motivated Ph.D. and M.S. students interested in
-                edge intelligence, AI security, and next-generation networks.
+                We are seeking motivated M.S. students interested in
+                Quantum-assisted Machine Learning and Autonomous Systems.
                 See the students page for requirements and how to apply.
               </p>
             </div>

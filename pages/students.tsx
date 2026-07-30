@@ -6,8 +6,8 @@ import { currentStudents } from "../lib/data";
 
 const requirements = [
   "Strong background in machine learning and quantum computing, autonomous systems, or next-generation networking",
-  "Experience with Python, PyTorch, and TensorFlow",
-  "Interest in quantum ML or next-generation network research (distributed computing, edge computing, autonomous systems)",
+  "Experience with Python, PyTorch, TensorFlow, and Qiskit",
+  "Interest in quantum ML (distributed QML, Quantum computing in SAGIN, autonomous systems)",
   "Self-motivated with good written and verbal communication skills",
 ];
 
@@ -18,7 +18,7 @@ const checklist = [
   "Any relevant publications or projects",
 ];
 
-const studentsDescription = `Graduate research group of ${PERSON.name} at ${PERSON.university}. Recruiting motivated Ph.D. and M.S. students in edge intelligence, AI security, quantum-assisted ML, and 5G/6G networks.`;
+const studentsDescription = `Graduate research group of ${PERSON.name} at ${PERSON.university}. We are looking for motivated M.S. students in quantum-assisted ML and Autonomous Systems.`;
 
 const studentsJsonLd = {
   "@context": "https://schema.org",
@@ -80,7 +80,7 @@ export default function Students() {
         <section className="mb-12">
           <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">Prospective students</h2>
           <p className="text-sm text-stone-600 dark:text-stone-400 mb-3">
-            I am actively seeking motivated Ph.D. and M.S. students interested in edge intelligence, AI security, and next-generation networks. Ideal candidates have:
+            We are seeking motivated M.S. students interested in Quantum-assisted Machine Learning and Autonomous Systems. Ideal candidates should have:
           </p>
           <ul className="space-y-1.5">
             {requirements.map((item) => (
