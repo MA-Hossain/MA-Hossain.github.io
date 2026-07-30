@@ -45,7 +45,7 @@ const monthIndex: Record<string, number> = {
 function dateSortKey(date: string): number {
   const parts = date.split(" ");
   if (parts.length === 1) {
-    return Number(parts[0]) * 12 + 11;
+    return Number(parts[0]) * 12;
   }
   const [mon, yr] = parts;
   return Number(yr) * 12 + (monthIndex[mon] ?? 0);
