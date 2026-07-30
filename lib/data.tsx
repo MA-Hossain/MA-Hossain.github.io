@@ -68,8 +68,8 @@ export const researchAreas = [
 ];
 
 export const currentStudents = [
-  { name: "Sharmin Milu", program: "PhD in Computational Science", since: "2025" },
-  { name: "Tanzimul Fahim", program: "PhD in Computational Science", since: "2026" },
-  { name: "Yeahia Sarker", program: "MSc in Engineering Technology", since: "2026" },
-  { name: "Most. Humaira Rime", program: "MSc in Engineering Technology", since: "2026" },
+  { name: "Sharmin Milu", program: "PhD in Computational Science", since: "Fall 2025" },
+  { name: "Tanzimul Fahim", program: "PhD in Computational Science", since: "Fall 2026" },
+  { name: "Yeahia Sarker", program: "MSc in Engineering Technology", since: "Spring 2026" },
+  { name: "Most. Humaira Rime", program: "MSc in Engineering Technology", since: "Fall 2026" },
 ];

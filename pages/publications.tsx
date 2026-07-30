@@ -43,7 +43,7 @@ export default function Publications({ publications }: Props) {
     "@type": "CollectionPage",
     "@id": `${SITE_URL}/publications#page`,
     url: `${SITE_URL}/publications`,
-    name: `Publications | ${PERSON.name}`,
+    name: `Notable Publications | ${PERSON.name}`,
     description: pubsDescription,
     author: {
       "@type": "Person",
@@ -73,7 +73,7 @@ export default function Publications({ publications }: Props) {
   return (
     <Layout>
       <SEO
-        title="Publications"
+        title="Notable Publications"
         description={pubsDescription}
         path="/publications"
         jsonLd={pubsJsonLd}
@@ -83,7 +83,7 @@ export default function Publications({ publications }: Props) {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
             <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Research Output</p>
-            <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Publications</h1>
+            <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Notable Publications</h1>
           </div>
           <a
             href="https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en"

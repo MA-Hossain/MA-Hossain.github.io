@@ -1,23 +1,23 @@
 ---
 projects:
-  - title: "AI-Native 6G Network Architecture"
-    slug: "ai-native-6g"
-    description: "Integrating AI/ML natively into 6G network layers for adaptive resource management, dynamic network slicing, and integrated sensing and communication (ISAC)."
+  - title: "Agentic AI for UAV"
+    slug: "agentic-ai-uav"
+    description: "Developing agentic AI frameworks that enable UAVs to autonomously plan, reason, and coordinate missions in dynamic airspace and edge environments."
     tags:
-      - 6G
-      - Network Slicing
-      - ISAC
-    overview: "Next-generation 6G networks require fundamentally new design paradigms where AI is not an add-on but a native component of every network layer. This project investigates how deep learning, reinforcement learning, and generative AI can be embedded into radio access, core, and edge layers to achieve self-optimizing, zero-touch networks capable of supporting diverse services from eMBB to URLLC and massive IoT simultaneously."
+      - UAV
+      - Agentic AI
+      - LLM
+    overview: "Unmanned aerial vehicles (UAVs) are evolving from remotely piloted platforms into autonomous agents capable of perception, reasoning, and cooperative decision-making. This project builds agentic AI systems, grounded in large language models, tool use, and multi-agent planning, that allow UAVs to interpret high-level mission intent, adapt to unforeseen conditions, and coordinate with other aerial and ground agents with minimal human supervision."
     objectives:
-      - "Develop AI-native air interface designs that jointly optimize sensing and communication"
-      - "Build dynamic network slicing engines using deep reinforcement learning for multi-tenant QoS"
-      - "Design intelligent spectrum management and interference coordination for sub-THz bands"
-      - "Investigate generative AI for network digital twin creation and what-if scenario planning"
+      - "Design LLM-driven planning agents that translate natural-language mission goals into executable UAV task graphs"
+      - "Enable closed-loop perception-reasoning-action cycles for autonomous navigation and task execution"
+      - "Develop multi-agent coordination protocols for swarms of UAVs under communication and energy constraints"
+      - "Ensure safe, verifiable, and policy-compliant behavior of agentic UAVs in shared airspace"
     methods:
-      - "Deep Reinforcement Learning (DRL) for resource allocation"
-      - "Transformer-based models for wireless channel prediction"
-      - "Multi-agent RL for distributed network slice management"
-      - "Diffusion models for radio environment map generation"
+      - "Tool-augmented LLM agents with memory and reflection for mission planning"
+      - "Hierarchical reinforcement learning coupled with language-based task decomposition"
+      - "Multi-agent communication via structured natural-language protocols"
+      - "Runtime guardrails and formal safety checks for autonomous flight decisions"
 
   - title: "Agentic LLM Security"
     slug: "agentic-llm-security"
@@ -38,24 +38,24 @@ projects:
       - "Constrained decoding and policy-based action filtering for safe tool use"
       - "Reinforcement learning from safety feedback (RLSF) for defensive agent training"
 
-  - title: "Agentic AI for UAV"
-    slug: "agentic-ai-uav"
-    description: "Developing agentic AI frameworks that enable UAVs to autonomously plan, reason, and coordinate missions in dynamic airspace and edge environments."
+  - title: "AI-Native 6G Network"
+    slug: "ai-native-6g"
+    description: "Integrating AI/ML natively into 6G network layers for adaptive resource management, dynamic network slicing, and integrated sensing and communication (ISAC)."
     tags:
-      - UAV
-      - Agentic AI
-      - LLM
-    overview: "Unmanned aerial vehicles (UAVs) are evolving from remotely piloted platforms into autonomous agents capable of perception, reasoning, and cooperative decision-making. This project builds agentic AI systems, grounded in large language models, tool use, and multi-agent planning, that allow UAVs to interpret high-level mission intent, adapt to unforeseen conditions, and coordinate with other aerial and ground agents with minimal human supervision."
+      - 6G
+      - Network Slicing
+      - ISAC
+    overview: "Next-generation 6G networks require fundamentally new design paradigms where AI is not an add-on but a native component of every network layer. This project investigates how deep learning, reinforcement learning, and generative AI can be embedded into radio access, core, and edge layers to achieve self-optimizing, zero-touch networks capable of supporting diverse services from eMBB to URLLC and massive IoT simultaneously."
     objectives:
-      - "Design LLM-driven planning agents that translate natural-language mission goals into executable UAV task graphs"
-      - "Enable closed-loop perception-reasoning-action cycles for autonomous navigation and task execution"
-      - "Develop multi-agent coordination protocols for swarms of UAVs under communication and energy constraints"
-      - "Ensure safe, verifiable, and policy-compliant behavior of agentic UAVs in shared airspace"
+      - "Develop AI-native air interface designs that jointly optimize sensing and communication"
+      - "Build dynamic network slicing engines using deep reinforcement learning for multi-tenant QoS"
+      - "Design intelligent spectrum management and interference coordination for sub-THz bands"
+      - "Investigate generative AI for network digital twin creation and what-if scenario planning"
     methods:
-      - "Tool-augmented LLM agents with memory and reflection for mission planning"
-      - "Hierarchical reinforcement learning coupled with language-based task decomposition"
-      - "Multi-agent communication via structured natural-language protocols"
-      - "Runtime guardrails and formal safety checks for autonomous flight decisions"
+      - "Deep Reinforcement Learning (DRL) for resource allocation"
+      - "Transformer-based models for wireless channel prediction"
+      - "Multi-agent RL for distributed network slice management"
+      - "Diffusion models for radio environment map generation"
 
   - title: "Quantum-Assisted ML for Next-Generation Networks"
     slug: "quantum-assisted-ml-nextgen-networks"

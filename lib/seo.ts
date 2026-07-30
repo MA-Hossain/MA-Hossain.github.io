@@ -26,7 +26,7 @@ export const PERSON = {
     "https://scholar.google.com/citations?user=ZXQAEfQAAAAJ&hl=en",
   labName: "ASQI Lab",
   labShortName: "ASQI Lab",
-  labExpansion: "Autonomous Systems and Quantum Intelligence",
+  labExpansion: "Autonomous Systems and Quantum Intelligence Laboratory",
   researchAreas: [
     "Agentic LLM Security",
     "Distributed Machine Learning",

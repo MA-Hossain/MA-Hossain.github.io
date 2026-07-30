@@ -28,8 +28,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const milestones = [
-  { date: "Jul 2026", text: "Serving as Program Committee member at AAAI 2027" },
-  { date: "Aug 2024", text: "Joined MTSU as Assistant Professor" },
+  { date: "Jul 2026", label: "Service", text: "Serving as Program Committee member at AAAI 2027" },
+  { date: "Aug 2024", label: "Appointment", text: "Joined MTSU as Assistant Professor" },
 ];
 
 const monthIndex: Record<string, number> = {
@@ -117,7 +117,7 @@ export default function Home({ publications }: Props) {
   const publicationNews = publications
     .filter((p) => p.date)
     .map((p) => ({ kind: "publication" as const, date: p.date as string, publication: p }));
-  const milestoneNews = milestones.map((m) => ({ kind: "milestone" as const, date: m.date, text: m.text }));
+  const milestoneNews = milestones.map((m) => ({ kind: "milestone" as const, date: m.date, label: m.label, text: m.text }));
   const newsFeed = [...publicationNews, ...milestoneNews].sort(
     (a, b) => dateSortKey(b.date) - dateSortKey(a.date)
   );
@@ -252,7 +252,14 @@ export default function Home({ publications }: Props) {
               <li key={i} className="flex gap-4 sm:gap-6">
                 <span className="text-xs font-semibold text-stone-400 dark:text-stone-500 uppercase tracking-wide shrink-0 w-14 pt-0.5">{item.date}</span>
                 {item.kind === "milestone" ? (
-                  <p className="text-sm text-stone-600 dark:text-stone-300 pt-0.5">{item.text}</p>
+                  <div className="flex-1 min-w-0 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-4">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="shrink-0 bg-stone-700 dark:bg-stone-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-md tracking-wide uppercase">
+                        {item.label}
+                      </span>
+                      <p className="text-sm font-medium text-stone-800 dark:text-stone-100 leading-snug">{item.text}</p>
+                    </div>
+                  </div>
                 ) : (
                   <div className="flex-1 min-w-0 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-4">
                     <div className="flex flex-wrap items-start gap-2">
