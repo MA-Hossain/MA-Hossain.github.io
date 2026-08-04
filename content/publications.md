@@ -22,18 +22,6 @@ publications:
   year: "2026"
   date: "Apr 2026"
 
-- venue: IEEE SATC
-  title: "Defending Against Inference-Time Role Drift Attacks on Agentic AI in Healthcare"
-  authors: "SY Fahim, MA Hossain, W Liu"
-  journal: "2026 IEEE 2nd International Conference on Secure IoT, Assured and Trusted Computing (SATC), pp. 1-8"
-  year: "2026"
-
-- venue: Microelectronics
-  title: "Adversarial Attack Resilient ML-Assisted Golden Free Approach for Hardware Trojan Detection"
-  authors: "A Ghimire, M Alkurdi, G Ghajari, MA Hossain, F Amsaad"
-  journal: "Microelectronics, vol. 2, no. 1"
-  year: "2026"
-
 - venue: IEEE ICIP
   title: "Energy-based Generative Models with Morphological Attention Networks for Hyperspectral Image Classification: A Unified Framework"
   authors: "MA Hossain, Y Sarker, W Liu, N Ansari"
@@ -47,18 +35,6 @@ publications:
   journal: "IEEE Transactions on Cognitive Communications and Networking, vol. 11, no. 3, pp. 1845-1853"
   year: "2025"
   date: "Jun 2025"
-
-- venue: IEEE ICC
-  title: "Federated Meta-RL for Network Slicing Aware VNFs Orchestration in 6G Core Networks"
-  authors: "MA Hossain, W Liu, N Ansari, M Samad"
-  journal: "2025 IEEE International Conference on Communications (ICC)"
-  year: "2025"
-
-- venue: IEEE ICMI
-  title: "Deep Cluster Distribution Alignment in Source-Target Domain Adaptation"
-  authors: "I Kowsar, SB Rabbani, KFB Akhter, MA Witherow, MA Hossain, MD Samad"
-  journal: "2025 IEEE 4th International Conference on Computing and Machine Intelligence (ICMI), pp. 1-8"
-  year: "2025"
 
 - venue: IEEE TNSM
   title: "Reinforcement Learning-based Network Slicing Scheme for Optimized UE-QoS in Future Networks"
@@ -131,10 +107,4 @@ publications:
   journal: "IEEE Transactions on Green Communications and Networking, vol. 5, no. 4, pp. 2150-2159"
   year: "2021"
   date: "May 2021"
-
-- venue: IEEE ICCCN
-  title: "Multi-operator Cell Tower Locations Prediction from Crowdsourced Data"
-  authors: "M Rahman, MA Hossain, M Yuksel"
-  journal: "2021 International Conference on Computer Communications and Networks (ICCCN), pp. 1-9"
-  year: "2021"
 ---
