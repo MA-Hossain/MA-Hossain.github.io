@@ -113,7 +113,7 @@ export default function Contact() {
           <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">Get in Touch</p>
           <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">Contact</h1>
           <p className="text-stone-500 dark:text-stone-400 mt-2 text-sm">
-            Reach out for research inquiries, collaboration proposals, or graduate admissions.
+            Reach out for research inquiries, proposal collaboration, or graduate\undergraduate assistantship.
           </p>
         </div>
 
