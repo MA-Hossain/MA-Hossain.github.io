@@ -9,7 +9,7 @@ committees:
   - role: "Guest Editor"
     venue: "Special Issue on AI-Native Mobile Edge Computing for 6G Networks: Intelligence, Security, Integration, and Optimization, Electronics"
   - role: "Organizing Committee Member (Publicity Chair)"
-    venue: "2026 IEEE Conference on Secure and Trustworthy CyberInfrastructure for IoT and Microelectronics (SaTC)"
+    venue: "2026 IEEE Conference on Secure and Trustworthy CyberInfrastructure for IoT and Microelectronics (SaTC 2026)"
   - role: "Organizing Committee Member (Publicity Chair)"
     venue: "13th International Conference on Sensors, IoT, and Intelligent Networks (SENSORNETS 2026)."
   - role: "Technical Program Committee Member"
