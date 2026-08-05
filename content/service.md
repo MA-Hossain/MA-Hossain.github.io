@@ -6,6 +6,8 @@ committees:
     venue: "Forty-Third International Conference on Machine Learning (ICML 2026)"
   - role: "Guest Editor"
     venue: "Special Issue on Secure and Trustworthy Cyberinfrastructure for IoT and Microelectronics, Journal of Hardware and Systems Security (Springer Nature)"
+  - role: "Guest Editor"
+    venue: "Special Issue on AI-Native Mobile Edge Computing for 6G Networks: Intelligence, Security, Integration, and Optimization, Electronics"
   - role: "Organizing Committee Member (Publicity Chair)"
     venue: "2026 IEEE Conference on Secure and Trustworthy CyberInfrastructure for IoT and Microelectronics (SaTC)"
   - role: "Organizing Committee Member (Publicity Chair)"
