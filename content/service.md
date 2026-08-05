@@ -8,6 +8,8 @@ committees:
     venue: "Special Issue on Secure and Trustworthy Cyberinfrastructure for IoT and Microelectronics, Journal of Hardware and Systems Security (Springer Nature)"
   - role: "Organizing Committee Member (Publicity Chair)"
     venue: "2026 IEEE Conference on Secure and Trustworthy CyberInfrastructure for IoT and Microelectronics (SaTC)"
+  - role: "Organizing Committee Member (Publicity Chair)"
+    venue: "13th International Conference on Sensors, IoT, and Intelligent Networks (SENSORNETS 2026)."
   - role: "Technical Program Committee Member"
     venue: "2026 IEEE International Conference on Communications (ICC) Workshop on Artificial Intelligence in Communications and Internet of Things for Sustainability"
   - role: "Technical Program Committee Member"
