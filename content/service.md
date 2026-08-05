@@ -27,8 +27,8 @@ committees:
 
 journals:
   - "IEEE Journal on Selected Areas in Communications (JSAC)"
-  - "IEEE Transactions on Cloud Computing (TCC)"
   - "IEEE Transactions on Mobile Computing (TMC)"
+  - "IEEE Transactions on Cloud Computing (TCC)"
   - "IEEE Transactions on Wireless Communications (TWC)"
   - "IEEE Transactions on Cognitive Communications and Networking (TCCN)"
   - "IEEE Transactions on Communications (TCOM)"
@@ -55,4 +55,6 @@ journals:
   - "Wireless Personal Communications (Springer Nature)"
   - "Journal of Grid Computing (Springer Nature)"
   - "Knowledge and Information Systems (Springer Nature)"
+  - "Cluster Computing (Springer Nature)"
+  - "International Journal of Information Security (Springer Nature)"
 ---
