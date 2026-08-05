@@ -3,7 +3,7 @@ committees:
   - role: "Program Committee Member"
     venue: "AAAI Conference on Artificial Intelligence (AAAI 2027)"
   - role: "Reviewer"
-    venue: "International Conference on Machine Learning (ICML 2026)"
+    venue: "Forty-Third International Conference on Machine Learning (ICML 2026)"
   - role: "Guest Editor"
     venue: "Special Issue on Secure and Trustworthy Cyberinfrastructure for IoT and Microelectronics, Journal of Hardware and Systems Security (Springer Nature)"
   - role: "Organizing Committee Member (Publicity Chair)"
