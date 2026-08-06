@@ -71,4 +71,5 @@ export const currentStudents = [
   { name: "Sharmin Milu", program: "PhD in Computational Science", since: "Fall 2025" },
   { name: "Tanzimul Fahim", program: "PhD in Computational Science", since: "Fall 2026" },
   { name: "Yeahia Sarker", program: "MSc in Engineering Technology", since: "Spring 2026" },
+  { name: "Jean Drugmang", program: "BSc in Aerospace (UAS Technology)", since: "Summer 2026" },
 ];
