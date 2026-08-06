@@ -88,9 +88,7 @@ export default function Service({ committees, journals }: Props) {
 
         {/* Journal Reviewing */}
         <section>
-          <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">Journal Reviewing</h2>
-          <p className="text-sm text-stone-500 dark:text-stone-400 mb-5">
-          </p>
+          <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-5">Journal Reviewing</h2>
           <div className="flex flex-wrap gap-2">
             {journals.map((j) => (
               <span
