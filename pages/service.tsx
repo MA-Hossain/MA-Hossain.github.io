@@ -90,7 +90,6 @@ export default function Service({ committees, journals }: Props) {
         <section>
           <h2 className="font-semibold text-stone-800 dark:text-stone-200 mb-2">Journal Reviewing</h2>
           <p className="text-sm text-stone-500 dark:text-stone-400 mb-5">
-            Peer reviewer for the following journals.
           </p>
           <div className="flex flex-wrap gap-2">
             {journals.map((j) => (
