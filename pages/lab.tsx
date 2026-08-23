@@ -2,7 +2,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { SITE_URL, PERSON } from "../lib/seo";
-import { researchAreas, currentStudents } from "../lib/data";
+import { researchAreas, currentStudents, initials } from "../lib/data";
 
 const labDescription = `${PERSON.labName} is the research group led by ${PERSON.name} at ${PERSON.university}, working on distributed edge intelligence, agentic LLM security, quantum-assisted machine learning, and AI-native next-generation networks.`;
 
@@ -112,7 +112,7 @@ export default function Lab() {
             {currentStudents.map((s) => (
               <div key={s.name} className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-5 flex items-start gap-3">
                 <div className="w-10 h-10 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 flex items-center justify-center shrink-0 font-semibold text-sm">
-                  {s.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                  {initials(s.name)}
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-stone-800 dark:text-stone-100">{s.name}</p>
