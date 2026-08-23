@@ -49,6 +49,7 @@ journals:
   - "Artificial Intelligence Review (Springer Nature)"
   - "Artificial Intelligence (Springer Nature)"
   - "Computer Networks (Elsevier)"
+  - "Pervasive and Mobile Computing (Elsevier)"
   - "Journal of Network and Computer Applications (Elsevier)"
   - "Wireless Networks (Springer Nature)"
   - "Discover Computing (Springer Nature)"
