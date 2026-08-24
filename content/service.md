@@ -2,6 +2,8 @@
 committees:
   - role: "Program Committee Member"
     venue: "AAAI Conference on Artificial Intelligence (AAAI 2027)"
+  - role: "Technical Program Co-Chair"
+    venue: "2027 IEEE International Conference on Secure and Trustworthy CyberInfrastructure for IoT and Microelectronics (SaTC 2027)"  
   - role: "Reviewer"
     venue: "Forty-Third International Conference on Machine Learning (ICML 2026)"
   - role: "Guest Editor"
