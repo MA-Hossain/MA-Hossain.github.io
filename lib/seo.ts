@@ -1,7 +1,7 @@
 // Update SITE_URL to match your deployed domain (GitHub Pages or custom domain)
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://arifhossain.github.io";
+  "https://ma-hossain.github.io";
 
 export const PERSON = {
   name: "Mohammad Arif Hossain",
