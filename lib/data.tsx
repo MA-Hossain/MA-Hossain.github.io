@@ -71,13 +71,10 @@ export const currentStudents = [
   { name: "Sharmin Milu", program: "PhD in Computational Science", since: "Fall 2025" },
   { name: "Tanzimul Fahim", program: "PhD in Computational Science", since: "Fall 2026" },
   { name: "Yeahia Sarker", program: "MSc in Engineering Technology", since: "Spring 2026" },
-  { name: "Jean Drugmand", program: "BSc in Aerospace (UAS Technology)", since: "Summer 2026" },
   { name: "Most. Humaira Rime", program: "MSc in Engineering Technology", since: "Fall 2026" },
   { name: "Md Shahariar Islam Shanto", program: "MSc in Engineering Technology", since: "Fall 2026" },
 ];
 
-// Honorifics are dropped so initials come from the actual name, keeping each
-// avatar distinct from the PI's badge.
 const honorifics = ["dr.", "dr", "md", "md.", "most.", "most", "mr.", "mrs.", "ms."];
 
 export function initials(name: string): string {
