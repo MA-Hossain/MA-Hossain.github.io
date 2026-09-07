@@ -32,7 +32,7 @@ function VenueBadge({ venue, impactFactor }: { venue: string; impactFactor?: str
       </span>
       {impactFactor && (
         <span
-          className="text-[10px] font-semibold text-teal-700 dark:text-teal-400 border border-teal-300 dark:border-teal-700 rounded px-1.5 py-px leading-tight"
+          className="self-stretch text-center text-[11px] font-bold text-teal-800 dark:text-teal-200 bg-teal-100 dark:bg-teal-900 border border-teal-300 dark:border-teal-700 rounded px-1.5 py-0.5 leading-tight whitespace-nowrap"
           title={`Journal impact factor: ${impactFactor}`}
         >
           IF {impactFactor}
