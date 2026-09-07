@@ -11,6 +11,7 @@ type Publication = {
   title: string;
   authors?: string;
   journal: string;
+  impactFactor?: string;
   year: string;
 };
 
@@ -23,11 +24,21 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return { props: { publications: data.publications as Publication[] } };
 };
 
-function VenueBadge({ venue }: { venue: string }) {
+function VenueBadge({ venue, impactFactor }: { venue: string; impactFactor?: string }) {
   return (
-    <span className="shrink-0 bg-teal-600 dark:bg-teal-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-md tracking-wide">
-      {venue}
-    </span>
+    <div className="shrink-0 flex flex-col items-center gap-1">
+      <span className="bg-teal-600 dark:bg-teal-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-md tracking-wide">
+        {venue}
+      </span>
+      {impactFactor && (
+        <span
+          className="text-[10px] font-semibold text-teal-700 dark:text-teal-400 border border-teal-300 dark:border-teal-700 rounded px-1.5 py-px leading-tight"
+          title={`Journal impact factor: ${impactFactor}`}
+        >
+          IF {impactFactor}
+        </span>
+      )}
+    </div>
   );
 }
 
@@ -119,7 +130,7 @@ export default function Publications({ publications }: Props) {
                       className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-4 hover:shadow-sm hover:border-stone-300 dark:hover:border-stone-700 transition-all"
                     >
                       <div className="flex flex-wrap items-start gap-2.5">
-                        <VenueBadge venue={pub.venue} />
+                        <VenueBadge venue={pub.venue} impactFactor={pub.impactFactor} />
                         <div className="flex-1 min-w-0">
                           <p className="text-xs sm:text-sm font-medium text-stone-800 dark:text-stone-100 leading-snug">
                             {pub.title}
