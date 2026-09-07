@@ -70,6 +70,7 @@ export const researchAreas = [
 export const currentStudents = [
   { name: "Sharmin Milu", program: "PhD in Computational Science", since: "Fall 2025" },
   { name: "Tanzimul Fahim", program: "PhD in Computational Science", since: "Fall 2026" },
+  { name: "Matthew Radice", program: "PhD in Computational Science", since: "Fall 2026" },
   { name: "Yeahia Sarker", program: "MSc in Engineering Technology", since: "Spring 2026" },
   { name: "Most. Humaira Rime", program: "MSc in Engineering Technology", since: "Fall 2026" },
   { name: "Md Shahariar Islam Shanto", program: "MSc in Engineering Technology", since: "Fall 2026" },
