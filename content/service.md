@@ -29,6 +29,7 @@ committees:
 
 journals:
   - "IEEE Journal on Selected Areas in Communications (JSAC)"
+  - "IEEE/ACM Transactions on Networking"
   - "IEEE Transactions on Mobile Computing (TMC)"
   - "IEEE Transactions on Cloud Computing (TCC)"
   - "IEEE Transactions on Wireless Communications (TWC)"
