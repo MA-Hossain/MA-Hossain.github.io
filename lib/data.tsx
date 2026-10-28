@@ -73,8 +73,16 @@ export type LabMember = {
 
 export const labMembers: LabMember[] = [
   { name: "Dr. Mohammad Arif Hossain", role: "pi", title: "Principal Investigator", photo: "/Profile.jpg" },
+
+  { name: "Sharmin Milu", role: "phd", title: "PhD in Computational Science", since: "Fall 2025" },
+  { name: "Tanzimul Fahim", role: "phd", title: "PhD in Computational Science", since: "Fall 2026" },
   { name: "Matthew Radice", role: "phd", title: "PhD in Computational Science", since: "Fall 2026" },
+
+  { name: "Yeahia Sarker", role: "masters", title: "MSc in Engineering Technology", since: "Spring 2026" },
+  { name: "Most. Humaira Rime", role: "masters", title: "MSc in Engineering Technology", since: "Fall 2026" },
   { name: "Md Shahariar Islam Shanto", role: "masters", title: "MSc in Engineering Technology", since: "Fall 2026" },
+
+  { name: "Jean Drugmand", role: "intern", title: "BSc in Aerospace (UAS Technology)", since: "Summer 2026" },
 ];
 
 // Sections render in this order. A section with no members is skipped, so an

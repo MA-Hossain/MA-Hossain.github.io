@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import MemberAvatar from "../components/MemberAvatar";
+import TeamRoster from "../components/TeamRoster";
 import { SITE_URL, PERSON } from "../lib/seo";
-import { labMembers, memberGroups, membersByRole, students, LabMember } from "../lib/data";
+import { labMembers, students } from "../lib/data";
 
 const requirements = [
   "Strong background in machine learning and quantum computing, autonomous systems, or next-generation networking",
@@ -47,32 +47,7 @@ const membersJsonLd = {
   },
 };
 
-function MemberCard({ member }: { member: LabMember }) {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <MemberAvatar name={member.name} photo={member.photo} />
-      <p className="mt-5 text-sm font-semibold text-stone-900 dark:text-stone-100 leading-snug">
-        {member.name}
-      </p>
-      <p className="mt-1 text-xs text-stone-500 dark:text-stone-400 leading-relaxed max-w-[15rem]">
-        {member.title}
-      </p>
-      {member.since && (
-        <p className="mt-1.5 text-[11px] font-medium text-teal-700 dark:text-teal-400 tracking-wide">
-          Since {member.since}
-        </p>
-      )}
-    </div>
-  );
-}
-
 export default function Members() {
-  const pi = membersByRole("pi")[0];
-  const tiers = memberGroups
-    .filter((g) => g.role !== "pi")
-    .map((g) => ({ ...g, people: membersByRole(g.role) }))
-    .filter((g) => g.people.length > 0);
-
   return (
     <Layout>
       <SEO
@@ -83,16 +58,17 @@ export default function Members() {
       />
 
       {/* Header */}
-      <section className="border-b border-stone-200 dark:border-stone-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 md:py-18">
-          <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">
+      <section className="relative overflow-hidden border-b border-stone-200 dark:border-stone-800">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(75%_70%_at_50%_0%,#ccfbf1_0%,transparent_65%)] dark:bg-[radial-gradient(75%_70%_at_50%_0%,#042f2e_0%,transparent_65%)] opacity-60" />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+          <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-3">
             {PERSON.labName}
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50">
+          <h1 className="font-serif text-4xl sm:text-5xl font-medium text-stone-900 dark:text-stone-50 tracking-tight">
             Members
           </h1>
-          <p className="text-stone-500 dark:text-stone-400 mt-3 text-[15px] max-w-2xl leading-relaxed">
-            The people behind{" "}
+          <p className="text-stone-500 dark:text-stone-400 mt-4 text-[15px] max-w-2xl mx-auto leading-relaxed">
+            The team behind{" "}
             <Link href="/lab" className="text-teal-700 dark:text-teal-400 hover:underline">
               {PERSON.labExpansion}
             </Link>
@@ -102,70 +78,16 @@ export default function Members() {
         </div>
       </section>
 
-      {/* Principal Investigator */}
-      {pi && (
-        <section className="border-b border-stone-200 dark:border-stone-800">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 md:py-16">
-            <div className="flex flex-col items-center text-center">
-              <MemberAvatar name={pi.name} photo={pi.photo} size="lg" accent />
-              <p className="mt-6 text-[11px] font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest">
-                {pi.title}
-              </p>
-              <h2 className="mt-2 font-serif text-xl sm:text-2xl font-medium text-stone-900 dark:text-stone-50">
-                {pi.name}
-              </h2>
-              <p className="mt-2 text-sm text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed">
-                {PERSON.title}, {PERSON.department}, {PERSON.university}
-              </p>
-              <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-                <Link
-                  href="/publications"
-                  className="text-sm font-medium text-teal-700 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors"
-                >
-                  Publications
-                </Link>
-                <span className="text-stone-300 dark:text-stone-700">·</span>
-                <Link
-                  href="/contact"
-                  className="text-sm font-medium text-teal-700 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Student tiers */}
-      {tiers.length > 0 && (
-        <section className="border-b border-stone-200 dark:border-stone-800">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 md:py-16 space-y-14">
-            {tiers.map((tier) => (
-              <div key={tier.role}>
-                <div className="flex items-center gap-4 mb-10">
-                  <h2 className="text-[11px] font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-widest shrink-0">
-                    {tier.label}
-                  </h2>
-                  <div className="h-px flex-1 bg-stone-200 dark:bg-stone-800" />
-                  <span className="text-[11px] font-medium text-stone-400 dark:text-stone-600 shrink-0">
-                    {tier.people.length}
-                  </span>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
-                  {tier.people.map((m) => (
-                    <MemberCard key={m.name} member={m} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      {/* Roster */}
+      <section className="border-b border-stone-200 dark:border-stone-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-20">
+          <TeamRoster />
+        </div>
+      </section>
 
       {/* Join the lab */}
       <section id="join" className="scroll-mt-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-18">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20">
           <p className="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-1.5">
             Openings
           </p>
