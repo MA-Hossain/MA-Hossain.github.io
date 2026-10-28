@@ -13,7 +13,7 @@ const PRIORITY = {
   "/publications": "0.9",
   "/projects": "0.9",
   "/service": "0.8",
-  "/students": "0.7",
+  "/members": "0.7",
   "/contact": "0.6",
 };
 const DEFAULT_PRIORITY = "0.8";
@@ -48,6 +48,11 @@ function collectRoutes(dir) {
     }
     if (!entry.name.endsWith(".html")) continue;
     if (entry.name === "404.html") continue;
+
+    // A page marked noindex does not belong in the sitemap, so redirect
+    // stubs and other hidden pages drop out on their own.
+    const html = fs.readFileSync(full, "utf-8");
+    if (/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html)) continue;
 
     const rel = path.relative(OUT_DIR, full).split(path.sep).join("/");
     const route = "/" + rel.replace(/\.html$/, "").replace(/(^|\/)index$/, "");

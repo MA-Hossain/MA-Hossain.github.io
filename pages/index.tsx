@@ -235,16 +235,16 @@ export default function Home({ publications }: Props) {
               View projects &#8594;
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {researchAreas.map((area) => (
               <div
                 key={area.title}
-                className="bg-white dark:bg-stone-900 rounded-2xl border border-stone-200 dark:border-stone-800 p-6 hover:shadow-sm hover:border-stone-300 dark:hover:border-stone-700 transition-all"
+                className="group bg-white dark:bg-stone-900 rounded-2xl border border-stone-200 dark:border-stone-800 p-6 sm:p-7 hover:border-teal-300 dark:hover:border-teal-800 hover:shadow-sm transition-all"
               >
-                <div className="w-9 h-9 rounded-lg bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-400 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-400 flex items-center justify-center mb-5 group-hover:bg-teal-100 dark:group-hover:bg-teal-900 transition-colors">
                   {area.icon}
                 </div>
-                <h3 className="font-semibold text-stone-900 dark:text-stone-100 text-[15px] mb-2">{area.title}</h3>
+                <h3 className="font-semibold text-stone-900 dark:text-stone-100 text-[15px] mb-2.5 leading-snug">{area.title}</h3>
                 <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">{area.description}</p>
               </div>
             ))}

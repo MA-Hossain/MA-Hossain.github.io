@@ -1,76 +1,95 @@
 export const researchAreas = [
   {
-    title: "Agentic LLM Security",
+    title: "Hybrid Quantum-Classical Computing",
     description:
-      "Securing agentic LLM systems against prompt injection, tool misuse, and adversarial manipulation, with autonomous defense for multi-agent workflows.",
+      "Partitioning network optimization across quantum and classical resources, so variational and annealing-based solvers handle the intractable core while classical hardware carries the rest.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" strokeWidth={1.8} />
+        <circle cx="17.25" cy="6.75" r="3.75" strokeWidth={1.8} />
+        <path strokeLinecap="round" strokeWidth={1.8}
+          d="M10.5 17.25h3a3.75 3.75 0 003.75-3.75v-2.25" />
       </svg>
     ),
   },
   {
-    title: "Distributed Machine Learning",
+    title: "Quantum Networking for SAGIN",
     description:
-      "Collaborative and privacy-aware distributed learning architectures that enable efficient model training across edge nodes.",
+      "Entanglement distribution and quantum key exchange across space, air, and ground layers, including handover and weather resilience for satellite-to-ground links.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        <circle cx="12" cy="4" r="2" strokeWidth={1.8} />
+        <path strokeLinecap="round" strokeWidth={1.8} d="M8.6 4H6.2M17.8 4h-2.4" />
+        <path strokeLinecap="round" strokeWidth={1.8} strokeDasharray="1.5 2" d="M12 6.4v4.4" />
+        <path strokeLinecap="round" strokeWidth={1.8} d="M8.2 14.4c2.2-1.7 5.4-1.7 7.6 0" />
+        <path strokeLinecap="round" strokeWidth={1.8} d="M2.8 20.4c3.1-2.9 15.3-2.9 18.4 0" />
       </svg>
     ),
   },
   {
-    title: "Edge Intelligence & IoT",
+    title: "Self-evolving Unmanned Aerial Systems",
     description:
-      "Optimizing computation offloading, resource allocation, and scheduling for mobile edge computing in heterogeneous IoT environments.",
+      "Aerial platforms that keep adapting after deployment, revising their own policies from operational experience rather than relying on a fixed model trained before launch.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+        <circle cx="6.5" cy="6.5" r="2.5" strokeWidth={1.8} />
+        <circle cx="17.5" cy="6.5" r="2.5" strokeWidth={1.8} />
+        <circle cx="6.5" cy="17.5" r="2.5" strokeWidth={1.8} />
+        <circle cx="17.5" cy="17.5" r="2.5" strokeWidth={1.8} />
+        <rect x="9.75" y="9.75" width="4.5" height="4.5" rx="1.25" strokeWidth={1.8} />
+        <path strokeLinecap="round" strokeWidth={1.8}
+          d="M8.3 8.3l1.6 1.6M15.7 8.3l-1.6 1.6M8.3 15.7l1.6-1.6M15.7 15.7l-1.6-1.6" />
       </svg>
     ),
   },
   {
-    title: "Generative AI",
+    title: "Security and Trustworthiness of UAS",
     description:
-      "Generative models for network management, synthetic data, and intelligent automation in communication systems.",
+      "Defending autonomous aerial systems against spoofing, hijacking, and adversarial control, and establishing the assurance evidence operators need before granting them authority.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinejoin="round" strokeWidth={1.8}
+          d="M12 2.75l7.25 2.9v5.6c0 4.3-3 7.9-7.25 9-4.25-1.1-7.25-4.7-7.25-9v-5.6z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    title: "AI-Native 6G Networks",
-    description:
-      "Integrating AI/ML natively into 5G/6G architectures for adaptive slicing, ISAC, and self-optimizing radio access.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-      </svg>
-    ),
-  },
-  {
-    title: "Quantum-Assisted ML",
-    description:
-      "Quantum computing paradigms to accelerate ML model training and optimization in next-generation networks.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+          d="M9.1 11.9l1.95 1.95 3.85-3.95" />
       </svg>
     ),
   },
 ];
 
-export const currentStudents = [
-  { name: "Matthew Radice", program: "PhD in Computational Science", since: "Fall 2026" },
-  { name: "Md Shahariar Islam Shanto", program: "MSc in Engineering Technology", since: "Fall 2026" },
+// Lab roster. "role" controls which section a person appears under on the
+// members page and the order they appear in; see memberGroups below.
+// "photo" is optional: leave it off and a neutral placeholder is shown until
+// an image is added to the public folder.
+export type MemberRole = "pi" | "phd" | "masters" | "intern";
+
+export type LabMember = {
+  name: string;
+  role: MemberRole;
+  title: string;
+  since?: string;
+  photo?: string;
+};
+
+export const labMembers: LabMember[] = [
+  { name: "Dr. Mohammad Arif Hossain", role: "pi", title: "Principal Investigator", photo: "/Profile.jpg" },
+  { name: "Matthew Radice", role: "phd", title: "PhD in Computational Science", since: "Fall 2026" },
+  { name: "Md Shahariar Islam Shanto", role: "masters", title: "MSc in Engineering Technology", since: "Fall 2026" },
 ];
+
+// Sections render in this order. A section with no members is skipped, so an
+// empty tier never leaves a bare heading on the page.
+export const memberGroups: { role: MemberRole; label: string }[] = [
+  { role: "pi", label: "Principal Investigator" },
+  { role: "phd", label: "PhD Students" },
+  { role: "masters", label: "Master's Students" },
+  { role: "intern", label: "Interns" },
+];
+
+export const membersByRole = (role: MemberRole) =>
+  labMembers.filter((m) => m.role === role);
+
+export const students = labMembers.filter((m) => m.role !== "pi");
 
 const honorifics = ["dr.", "dr", "md", "md.", "most.", "most", "mr.", "mrs.", "ms."];
 
