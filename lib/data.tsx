@@ -81,8 +81,6 @@ export const labMembers: LabMember[] = [
   { name: "Yeahia Sarker", role: "masters", title: "MSc in Engineering Technology", since: "Spring 2026" },
   { name: "Most. Humaira Rime", role: "masters", title: "MSc in Engineering Technology", since: "Fall 2026" },
   { name: "Md Shahariar Islam Shanto", role: "masters", title: "MSc in Engineering Technology", since: "Fall 2026" },
-
-  { name: "Jean Drugmand", role: "intern", title: "BSc in Aerospace (UAS Technology)", since: "Summer 2026" },
 ];
 
 // Sections render in this order. A section with no members is skipped, so an
