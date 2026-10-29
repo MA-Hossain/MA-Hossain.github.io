@@ -2,7 +2,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { SITE_URL, PERSON } from "../../lib/seo";
@@ -17,7 +20,20 @@ type Project = {
   methods: string[];
 };
 
-type Props = { project: Project; accentIndex: number };
+type Props = {
+  project: Project | null;
+  accentIndex: number;
+  redirectTo: string | null;
+};
+
+// Slugs from before the research focus changed. They still build a page so old
+// links and search results land somewhere useful instead of on a 404.
+const legacySlugs: Record<string, string> = {
+  "agentic-ai-uav": "/projects/self-evolving-uas",
+  "quantum-assisted-ml-nextgen-networks": "/projects/hybrid-quantum-classical-networks",
+  "agentic-llm-security": "/projects",
+  "ai-native-6g": "/projects",
+};
 
 const contentPath = () => path.join(process.cwd(), "content", "projects.md");
 
@@ -28,17 +44,22 @@ function readProjects(): Project[] {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projects = readProjects();
+  const slugs = [...readProjects().map((p) => p.slug), ...Object.keys(legacySlugs)];
   return {
-    paths: projects.map((p) => ({ params: { slug: p.slug } })),
+    paths: slugs.map((slug) => ({ params: { slug } })),
     fallback: false,
   };
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const slug = params?.slug as string;
+  const movedTo = legacySlugs[slug];
+  if (movedTo) {
+    return { props: { project: null, accentIndex: 0, redirectTo: movedTo } };
+  }
   const projects = readProjects();
-  const index = projects.findIndex((p) => p.slug === params?.slug);
-  return { props: { project: projects[index], accentIndex: index } };
+  const index = projects.findIndex((p) => p.slug === slug);
+  return { props: { project: projects[index], accentIndex: index, redirectTo: null } };
 };
 
 const accentPalettes = [
@@ -50,7 +71,41 @@ const accentPalettes = [
   { headerBg: "bg-emerald-50 dark:bg-emerald-950/40", headerBorder: "border-emerald-200 dark:border-emerald-800", badge: "bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800", icon: "bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-400", dot: "bg-emerald-500", back: "text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-200" },
 ];
 
-export default function ProjectDetail({ project, accentIndex }: Props) {
+function MovedProject({ to }: { to: string }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace(to);
+  }, [router, to]);
+
+  return (
+    <>
+      <Head>
+        <title>Projects</title>
+        <meta name="robots" content="noindex,follow" />
+        <link rel="canonical" href={`${SITE_URL}${to}`} />
+        <meta httpEquiv="refresh" content={`0;url=${to}`} />
+      </Head>
+      <main className="min-h-screen flex items-center justify-center bg-stone-50 dark:bg-stone-950 px-6">
+        <p className="text-sm text-stone-500 dark:text-stone-400">
+          This project moved. Continue to{" "}
+          <a href={to} className="text-teal-700 dark:text-teal-400 hover:underline">
+            the current page
+          </a>
+          .
+        </p>
+      </main>
+    </>
+  );
+}
+
+export default function ProjectPage({ project, accentIndex, redirectTo }: Props) {
+  if (redirectTo) return <MovedProject to={redirectTo} />;
+  if (!project) return null;
+  return <ProjectDetail project={project} accentIndex={accentIndex} />;
+}
+
+function ProjectDetail({ project, accentIndex }: { project: Project; accentIndex: number }) {
   const accent = accentPalettes[accentIndex % accentPalettes.length];
   const projectUrl = `${SITE_URL}/projects/${project.slug}`;
 

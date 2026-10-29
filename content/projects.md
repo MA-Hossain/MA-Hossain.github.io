@@ -1,78 +1,78 @@
 ---
 projects:
-  - title: "Agentic AI for UAV"
-    slug: "agentic-ai-uav"
-    description: "Developing agentic AI frameworks that enable UAVs to autonomously plan, reason, and coordinate missions in dynamic airspace and edge environments."
+  - title: "Hybrid Quantum-Classical Computing for Next-Generation Networks"
+    slug: "hybrid-quantum-classical-networks"
+    description: "Partitioning network optimization across quantum and classical resources, so variational and annealing-based solvers handle the intractable core while classical hardware carries the rest."
     tags:
-      - UAV
-      - Agentic AI
-      - LLM
-    overview: "Unmanned aerial vehicles (UAVs) are evolving from remotely piloted platforms into autonomous agents capable of perception, reasoning, and cooperative decision-making. This project builds agentic AI systems, grounded in large language models, tool use, and multi-agent planning, that allow UAVs to interpret high-level mission intent, adapt to unforeseen conditions, and coordinate with other aerial and ground agents with minimal human supervision."
+      - Quantum Computing
+      - Hybrid Algorithms
+      - Network Optimization
+    overview: "Many of the hardest problems in next-generation networking, among them resource allocation, routing under uncertainty, and slice admission, are combinatorial and grow faster than classical solvers can follow. Near-term quantum hardware cannot run these workloads end to end, but it can take the part classical methods handle worst. This project studies how to split a network optimization problem between the two, which subproblems justify a quantum solver at all, and what a hybrid pipeline must do to stay useful under the noise and qubit limits of current devices."
     objectives:
-      - "Design LLM-driven planning agents that translate natural-language mission goals into executable UAV task graphs"
-      - "Enable closed-loop perception-reasoning-action cycles for autonomous navigation and task execution"
-      - "Develop multi-agent coordination protocols for swarms of UAVs under communication and energy constraints"
-      - "Ensure safe, verifiable, and policy-compliant behavior of agentic UAVs in shared airspace"
+      - "Identify the network optimization subproblems where a quantum solver offers real advantage over a strong classical heuristic"
+      - "Build hybrid pipelines that decompose large problems into quantum-sized cores with classical pre- and post-processing"
+      - "Characterize how gate noise and limited coherence degrade solution quality at realistic problem sizes"
+      - "Benchmark hybrid pipelines against tuned classical baselines rather than naive ones"
     methods:
-      - "Tool-augmented LLM agents with memory and reflection for mission planning"
-      - "Hierarchical reinforcement learning coupled with language-based task decomposition"
-      - "Multi-agent communication via structured natural-language protocols"
-      - "Runtime guardrails and formal safety checks for autonomous flight decisions"
+      - "QAOA and variational quantum eigensolvers for combinatorial subproblems"
+      - "Quantum annealing on QUBO formulations of resource allocation"
+      - "Classical decomposition, including Benders and column generation, to size subproblems for available hardware"
+      - "Noise-aware circuit design and error mitigation across simulators and cloud quantum backends"
 
-  - title: "Agentic LLM Security"
-    slug: "agentic-llm-security"
-    description: "Securing agentic LLM systems against prompt injection, tool misuse, and adversarial manipulation, with autonomous defense for multi-agent workflows."
+  - title: "Quantum Networking for Space-Air-Ground Integrated Networks"
+    slug: "quantum-networking-sagin"
+    description: "Entanglement distribution and quantum key exchange across space, air, and ground layers, including handover and weather resilience for satellite-to-ground links."
     tags:
-      - LLM Security
-      - Agentic AI
+      - Quantum Networking
+      - SAGIN
+      - Entanglement Distribution
+    overview: "A space-air-ground integrated network layers satellites, aerial platforms, and terrestrial infrastructure into a single system. Carrying quantum information across those layers is harder than carrying classical traffic. Entanglement is fragile, photons are lost to atmospheric turbulence and cloud cover, and the links themselves are moving. This project develops the protocols and the control plane a quantum-capable SAGIN would need, covering entanglement distribution over heterogeneous links, key management, and what becomes of a quantum session when a satellite passes out of view."
+    objectives:
+      - "Design entanglement distribution protocols that span satellite, aerial, and ground segments"
+      - "Model atmospheric loss and turbulence to predict achievable key rates on free-space links"
+      - "Develop handover schemes that preserve quantum sessions as satellites and aerial relays move"
+      - "Study placement of quantum repeaters and trusted nodes under realistic coverage constraints"
+    methods:
+      - "Free-space optical channel modeling for satellite-to-ground and air-to-ground links"
+      - "Discrete-event simulation of entanglement swapping and purification scheduling"
+      - "Decoy-state QKD analysis under finite-key and atmospheric-loss conditions"
+      - "Routing and resource allocation for a hybrid quantum-classical control plane"
+
+  - title: "Self-evolving Unmanned Aerial Systems"
+    slug: "self-evolving-uas"
+    description: "Aerial platforms that keep adapting after deployment, revising their own policies from operational experience rather than relying on a fixed model trained before launch."
+    tags:
+      - UAS
+      - Lifelong Learning
+      - Autonomy
+    overview: "Most autonomous aerial systems are frozen at deployment. The policy that flies the aircraft is the policy that was trained in simulation months earlier, while conditions drift, airframes wear, and missions change, so the gap between the training distribution and the operating environment only widens. This project studies aerial systems that keep learning in the field, updating their own policies from the data they generate while flying, without catastrophic forgetting and without drifting outside the behavior their operators approved."
+    objectives:
+      - "Develop on-platform learning that adapts control and planning policies from operational data"
+      - "Prevent catastrophic forgetting so adaptation on a new mission does not erase earlier competence"
+      - "Keep adaptation inside verified behavioral bounds so autonomy does not drift out of certification"
+      - "Share learned experience across a fleet without moving raw sensor data off the aircraft"
+    methods:
+      - "Continual and lifelong reinforcement learning with experience replay"
+      - "Sim-to-real transfer and online domain adaptation"
+      - "Federated learning across fleets under bandwidth and privacy constraints"
+      - "Runtime monitors that constrain policy updates to an approved operating envelope"
+
+  - title: "Security and Trustworthiness of UAS"
+    slug: "uas-security-trust"
+    description: "Defending autonomous aerial systems against spoofing, hijacking, and adversarial control, and establishing the assurance evidence operators need before granting them authority."
+    tags:
+      - UAS Security
       - Adversarial ML
-    overview: "As large language models are deployed as autonomous agents that invoke tools, browse the web, and coordinate with other agents, they introduce a new class of attack surfaces spanning prompt injection, tool abuse, memory poisoning, and multi-agent collusion. This project develops threat models, detection mechanisms, and runtime defenses that make agentic LLM systems robust, auditable, and trustworthy in high-stakes deployments."
+      - Assurance
+    overview: "An autonomous aircraft is a target in a way a remotely piloted one is not. An attacker who can shape what its sensors report, or what its learned policy decides, can redirect it without ever touching the control link. GNSS spoofing, perception attacks, poisoned training data, and compromised command links all arrive at the same outcome. This project builds defenses for those attack surfaces and, just as importantly, the assurance evidence an operator or a regulator needs before trusting an autonomous platform with real authority."
     objectives:
-      - "Characterize attack surfaces unique to tool-using, memory-augmented LLM agents"
-      - "Build runtime monitors that detect prompt injection and anomalous tool invocations"
-      - "Design policy-enforcing guardrails for multi-agent communication and task delegation"
-      - "Develop benchmarks and red-teaming frameworks for evaluating agentic LLM robustness"
+      - "Characterize the attack surface of autonomous aerial systems across sensing, learning, and command links"
+      - "Detect GNSS spoofing and sensor manipulation in flight through cross-sensor consistency"
+      - "Harden learned perception and control policies against adversarial and poisoned inputs"
+      - "Define the assurance evidence that justifies granting an autonomous platform operational authority"
     methods:
-      - "Adversarial prompt generation and automated red-teaming pipelines"
-      - "Information-flow tracking across agent memory, tools, and external content"
-      - "Constrained decoding and policy-based action filtering for safe tool use"
-      - "Reinforcement learning from safety feedback (RLSF) for defensive agent training"
-
-  - title: "AI-Native 6G Network"
-    slug: "ai-native-6g"
-    description: "Integrating AI/ML natively into 6G network layers for adaptive resource management, dynamic network slicing, and integrated sensing and communication (ISAC)."
-    tags:
-      - 6G
-      - Network Slicing
-      - ISAC
-    overview: "Next-generation 6G networks require fundamentally new design paradigms where AI is not an add-on but a native component of every network layer. This project investigates how deep learning, reinforcement learning, and generative AI can be embedded into radio access, core, and edge layers to achieve self-optimizing, zero-touch networks capable of supporting diverse services from eMBB to URLLC and massive IoT simultaneously."
-    objectives:
-      - "Develop AI-native air interface designs that jointly optimize sensing and communication"
-      - "Build dynamic network slicing engines using deep reinforcement learning for multi-tenant QoS"
-      - "Design intelligent spectrum management and interference coordination for sub-THz bands"
-      - "Investigate generative AI for network digital twin creation and what-if scenario planning"
-    methods:
-      - "Deep Reinforcement Learning (DRL) for resource allocation"
-      - "Transformer-based models for wireless channel prediction"
-      - "Multi-agent RL for distributed network slice management"
-      - "Diffusion models for radio environment map generation"
-
-  - title: "Quantum-Assisted ML for Next-Generation Networks"
-    slug: "quantum-assisted-ml-nextgen-networks"
-    description: "Exploring quantum and hybrid quantum-classical ML algorithms to accelerate training, enhance expressivity, and tackle optimization bottlenecks in next-generation networks."
-    tags:
-      - Quantum ML
-      - Hybrid Computing
-      - Optimization
-    overview: "As classical machine learning approaches fundamental limits in training cost and optimization complexity, quantum computing offers a promising complement through superposition, entanglement, and quantum parallelism. This project investigates hybrid quantum-classical learning pipelines that embed variational quantum circuits into classical ML workflows to address large-scale optimization, feature encoding, and resource allocation problems arising in wireless networks and edge intelligence."
-    objectives:
-      - "Design variational quantum circuits (VQCs) for classification and regression tasks on edge-scale datasets"
-      - "Develop hybrid quantum-classical optimizers for resource allocation in 6G and edge networks"
-      - "Benchmark quantum kernel methods against classical counterparts for feature-rich wireless data"
-      - "Investigate noise-resilient training strategies suitable for near-term NISQ hardware"
-    methods:
-      - "Variational Quantum Eigensolver (VQE) and QAOA for combinatorial network optimization"
-      - "Parameterized quantum circuits trained with parameter-shift gradients"
-      - "Quantum kernel estimation for support vector machines"
-      - "Hybrid pipelines combining PennyLane/Qiskit simulators with classical deep learning frameworks"
+      - "Adversarial robustness evaluation of perception and control models"
+      - "Multi-sensor consistency checking and anomaly detection for spoofing"
+      - "Authenticated and integrity-protected command, control, and telemetry links"
+      - "Runtime verification and structured assurance cases for autonomy certification"
 ---
