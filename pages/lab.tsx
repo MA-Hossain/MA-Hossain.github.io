@@ -1,21 +1,9 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Link from "next/link";
-import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import TeamRoster from "../components/TeamRoster";
 import { SITE_URL, PERSON } from "../lib/seo";
 import { researchAreas, labMembers } from "../lib/data";
-
-type Props = { publicationCount: number };
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const filePath = path.join(process.cwd(), "content", "publications.md");
-  const { data } = matter(fs.readFileSync(filePath, "utf-8"));
-  return { props: { publicationCount: (data.publications ?? []).length } };
-};
 
 const labDescription = `${PERSON.labName} is the research group led by ${PERSON.name} at ${PERSON.university}, working on hybrid quantum-classical computing, quantum networking for space-air-ground integrated networks, and self-evolving, trustworthy unmanned aerial systems.`;
 
@@ -51,20 +39,7 @@ const labJsonLd = {
   },
 };
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <p className="font-serif text-3xl sm:text-4xl font-medium text-stone-900 dark:text-stone-50 tabular-nums">
-        {value}
-      </p>
-      <p className="mt-1 text-xs text-stone-500 dark:text-stone-400 uppercase tracking-widest">
-        {label}
-      </p>
-    </div>
-  );
-}
-
-export default function Lab({ publicationCount }: Props) {
+export default function Lab() {
   return (
     <Layout>
       <SEO
@@ -87,32 +62,13 @@ export default function Lab({ publicationCount }: Props) {
           <p className="font-serif text-lg sm:text-xl text-teal-700 dark:text-teal-400 mb-6">
             {PERSON.labExpansion}
           </p>
-          <p className="text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl text-[15px] mb-10">
+          <p className="text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl text-[15px]">
             We work where quantum information processing meets autonomous
             systems. Our research spans hybrid quantum-classical methods for
             hard network optimization, quantum links across space, air, and
             ground, and aerial platforms that keep learning after deployment
             without giving up on safety or assurance.
           </p>
-
-          <div className="flex flex-wrap gap-x-12 gap-y-6 pb-10 mb-8 border-b border-stone-200 dark:border-stone-800">
-            <Stat value={String(labMembers.length)} label="Members" />
-            <Stat value={String(researchAreas.length)} label="Focus areas" />
-            <Stat value={String(publicationCount)} label="Publications" />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-stone-500 dark:text-stone-400">
-            <span>
-              Directed by{" "}
-              <span className="text-stone-700 dark:text-stone-200 font-medium">
-                {PERSON.name}
-              </span>
-            </span>
-            <span className="hidden sm:inline text-stone-300 dark:text-stone-700">·</span>
-            <span>{PERSON.department}</span>
-            <span className="hidden sm:inline text-stone-300 dark:text-stone-700">·</span>
-            <span>{PERSON.university}</span>
-          </div>
         </div>
       </section>
 
