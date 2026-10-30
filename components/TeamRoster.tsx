@@ -1,6 +1,7 @@
 import Link from "next/link";
 import MemberAvatar from "./MemberAvatar";
 import MemberCard from "./MemberCard";
+import VacantCard from "./VacantCard";
 import { memberGroups, membersByRole } from "../lib/data";
 import { PERSON } from "../lib/seo";
 
@@ -63,6 +64,9 @@ export default function TeamRoster({ showLinks = true }: { showLinks?: boolean }
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {tier.people.map((m) => (
                 <MemberCard key={m.name} member={m} />
+              ))}
+              {Array.from({ length: tier.openings ?? 0 }, (_, i) => (
+                <VacantCard key={`vacant-${tier.role}-${i}`} />
               ))}
             </div>
           </div>

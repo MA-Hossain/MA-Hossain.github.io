@@ -144,18 +144,24 @@ export const labMembers: LabMember[] = [
   {
     name: "Shail Mehta",
     role: "intern",
+    title: "MSc in Engineering Management",
     since: "Fall 2026",
     photo: "/members/shail.jpg",
   },
 ];
 
 // Sections render in this order. A section with no members is skipped, so an
-// empty tier never leaves a bare heading on the page.
-export const memberGroups: { role: MemberRole; label: string }[] = [
+// empty tier never leaves a bare heading on the page. "openings" adds that many
+// placeholder cards after the real ones, to fill out a short row.
+export const memberGroups: {
+  role: MemberRole;
+  label: string;
+  openings?: number;
+}[] = [
   { role: "pi", label: "Principal Investigator" },
-  { role: "phd", label: "PhD Students" },
+  { role: "phd", label: "Doctoral Students" },
   { role: "masters", label: "Master's Students" },
-  { role: "intern", label: "Interns" },
+  { role: "intern", label: "Interns", openings: 2 },
 ];
 
 export const membersByRole = (role: MemberRole) =>
