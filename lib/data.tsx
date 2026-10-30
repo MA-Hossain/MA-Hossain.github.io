@@ -95,7 +95,7 @@ export const labMembers: LabMember[] = [
     },
   },
   {
-    name: "Tanzimul Fahim",
+    name: "Tanzimul A. Fahim",
     role: "phd",
     title: "PhD in Computational Science",
     since: "Fall 2026",
@@ -142,7 +142,7 @@ export const labMembers: LabMember[] = [
 
   // Interns join for a single semester, so "since" is shown as a plain term.
   {
-    name: "Shail Mehta",
+    name: "Shail Jagat Mehta",
     role: "intern",
     title: "MSc in Engineering Management",
     since: "Fall 2026",
