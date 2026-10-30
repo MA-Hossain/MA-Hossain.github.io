@@ -28,3 +28,6 @@ yarn-error.log*
 
 # editor / tooling
 .claude/
+
+# member photo originals (processed copies live in public/members)
+/Member Pictures/
