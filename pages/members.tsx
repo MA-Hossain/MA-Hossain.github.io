@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import TeamRoster from "../components/TeamRoster";
 import { SITE_URL, PERSON } from "../lib/seo";
-import { labMembers, students } from "../lib/data";
+import { labMembers } from "../lib/data";
 
 const requirements = [
   "Strong background in machine learning and quantum computing, autonomous systems, or next-generation networking",
@@ -139,9 +139,6 @@ export default function Members() {
             </svg>
             Email Dr. Hossain
           </a>
-          <p className="mt-3 text-xs text-stone-400 dark:text-stone-500">
-            Currently {students.length} graduate {students.length === 1 ? "member" : "members"} in the group.
-          </p>
         </div>
       </section>
     </Layout>

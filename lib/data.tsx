@@ -167,8 +167,6 @@ export const memberGroups: {
 export const membersByRole = (role: MemberRole) =>
   labMembers.filter((m) => m.role === role);
 
-export const students = labMembers.filter((m) => m.role !== "pi");
-
 const honorifics = ["dr.", "dr", "md", "md.", "most.", "most", "mr.", "mrs.", "ms."];
 
 export function initials(name: string): string {
