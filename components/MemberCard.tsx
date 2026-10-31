@@ -25,16 +25,6 @@ export default function MemberCard({ member }: { member: LabMember }) {
           {term}
         </p>
       )}
-      {member.link && (
-        <a
-          href={member.link.href}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 text-xs font-medium text-teal-700 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 hover:underline break-all"
-        >
-          {member.link.label}
-        </a>
-      )}
     </div>
   );
 }

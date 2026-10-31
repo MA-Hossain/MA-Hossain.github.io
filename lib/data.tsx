@@ -61,10 +61,7 @@ export const researchAreas = [
 // members page and the order they appear in; see memberGroups below.
 // "photo" is optional: leave it off and a neutral placeholder is shown until
 // an image is added to public/members.
-// "link" is an optional personal site or profile shown under the name.
 export type MemberRole = "pi" | "phd" | "masters" | "intern";
-
-export type MemberLink = { label: string; href: string };
 
 export type LabMember = {
   name: string;
@@ -72,7 +69,6 @@ export type LabMember = {
   title?: string;
   since?: string;
   photo?: string;
-  link?: MemberLink;
 };
 
 export const labMembers: LabMember[] = [
@@ -84,15 +80,11 @@ export const labMembers: LabMember[] = [
   },
 
   {
-    name: "Sharmin Milu",
+    name: "Sharmin Akter Milu",
     role: "phd",
     title: "PhD in Computational Science",
     since: "Fall 2025",
     photo: "/members/milu.jpg",
-    link: {
-      label: "Google Scholar",
-      href: "https://scholar.google.com/citations?hl=en&user=EI29sZUAAAAJ",
-    },
   },
   {
     name: "Tanzimul A. Fahim",
@@ -100,7 +92,6 @@ export const labMembers: LabMember[] = [
     title: "PhD in Computational Science",
     since: "Fall 2026",
     photo: "/members/fahim.jpg",
-    link: { label: "www.tanzimulalam.com", href: "https://www.tanzimulalam.com" },
   },
   {
     name: "Matthew Radice",
@@ -115,18 +106,13 @@ export const labMembers: LabMember[] = [
     title: "MSc in Engineering Technology",
     since: "Spring 2026",
     photo: "/members/yeahia.jpg",
-    link: { label: "www.yeahiasarker.com", href: "https://www.yeahiasarker.com" },
   },
   {
-    name: "Most. Humaira Rime",
+    name: "Most Humayra Khanom Rime",
     role: "masters",
     title: "MSc in Engineering Technology",
     since: "Fall 2026",
     photo: "/members/rime.jpg",
-    link: {
-      label: "Google Scholar",
-      href: "https://scholar.google.com/citations?user=VYSzUF8AAAAJ&hl=en",
-    },
   },
   {
     name: "Md Shahariar Islam Shanto",
@@ -134,10 +120,6 @@ export const labMembers: LabMember[] = [
     title: "MSc in Engineering Technology",
     since: "Fall 2026",
     photo: "/members/shanto.jpg",
-    link: {
-      label: "www.shahaariar.github.io",
-      href: "https://shahaariar.github.io/shahariar/",
-    },
   },
 
   // Interns join for a single semester, so "since" is shown as a plain term.
