@@ -93,12 +93,6 @@ export const labMembers: LabMember[] = [
     since: "Fall 2026",
     photo: "/members/fahim.jpg",
   },
-  {
-    name: "Matthew Radice",
-    role: "phd",
-    title: "PhD in Computational Science",
-    since: "Fall 2026",
-  },
 
   {
     name: "Yeahia Sarker",
@@ -107,13 +101,7 @@ export const labMembers: LabMember[] = [
     since: "Spring 2026",
     photo: "/members/yeahia.jpg",
   },
-  {
-    name: "Most Humayra Khanom Rime",
-    role: "masters",
-    title: "MSc in Engineering Technology",
-    since: "Fall 2026",
-    photo: "/members/rime.jpg",
-  },
+
   {
     name: "Md Shahariar Islam Shanto",
     role: "masters",
