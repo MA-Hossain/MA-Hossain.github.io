@@ -93,6 +93,12 @@ export const labMembers: LabMember[] = [
     since: "Fall 2026",
     photo: "/members/fahim.jpg",
   },
+  {
+    name: "Matthew Radice",
+    role: "phd",
+    title: "PhD in Computational Science",
+    since: "Fall 2026",
+  },
 
   {
     name: "Yeahia Sarker",
