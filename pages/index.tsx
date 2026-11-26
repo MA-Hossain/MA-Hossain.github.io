@@ -164,7 +164,7 @@ export default function Home({ publications }: Props) {
                 He has published in top-tier venues, including IEEE Transactions on Cloud 
                 Computing and IEEE Transactions on Cognitive Communications and Networking. 
                 He serves as a Program Committee member (e.g., AAAI) and reviewer for top AI 
-                and networking venues. He is a member of IEEE.
+                and networking venues. He is an IEEE Senior Member.
               </p>
 
               {/* Education */}
