@@ -28,7 +28,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const milestones = [
-  { date: "Jul 2026", label: "Service", text: "Serving as Program Committee member at AAAI 2027" },
+  { date: "Nov 2026", label: "Award", text: "Elected as IEEE Senior Member" },
+  { date: "Jul 2026", label: "Service", text: "Serving as a Program Committee member at AAAI 2027" },
   { date: "Aug 2024", label: "Appointment", text: "Joined MTSU as Assistant Professor" },
   { date: "2025", label: "Award", text: "Newark College of Engineering Outstanding Dissertation Award, New Jersey Institute of Technology (NJIT), USA" },
   { date: "2024", label: "Award", text: "Hashimoto Prize for outstanding doctoral candidate, Department of Electrical and Computer Engineering, NJIT, USA" },
